@@ -9,13 +9,13 @@
                 <div class="row">
                 	<div class = "col-md-6">
                 		<label>Enter New Password</label>
-                		<input type="password" name="password" id="password" placeholder="Enter New Password" />
+                		<input type="password" name="password" id="password" placeholder="Enter New Password" >
                         
                 	</div>
                 	
                 	<div class = "col-md-6">
                 		<label>Enter Confirm Password</label>
-                		<input type="password" name="repassword" id="repassword" placeholder="Enter Confirm Password" />
+                		<input type="password" name="repassword" id="repassword" placeholder="Enter Confirm Password" >
                 	</div>
 
                 </div>

@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="css/modules/logical.css">
+<link rel="stylesheet" href="css/modules/logical.css">
  <div class="row-one widgettable">
     <div class="col-md-12 content-top-2 card">
         <div class="agileinfo-cdr">
@@ -93,62 +93,68 @@
 		                    <input type="hidden" name="curl" value="http://www.royalsoftwaresolution.com/RoyalMaster/User/index.php?file=failure" />
 							<section class="creditly-wrapper wthree royals_agileits_wrapper">
 									<div class="first-row form-group">
-										<div class="controls">
+									 <div class="row">
+										<div class="controls col-md-6 fname default-margin">
 											<label class="control-label">First Name:</label>
-											<input class="billing-address-name form-control"  name="firstname" id="firstname" placeholder="Royal Software" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" />
+											<input class="billing-address-name form-control"  name="firstname" id="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" />
 										</div>
-										<div class="controls">
+										<div class="controls col-md-6 lname default-margin">
 											<label class="control-label">Last Name:</label>
 	                                        <input class="billing-address-lname form-control" name="lastname" id="lastname" value="<?php echo (empty($posted['lastname'])) ? '' : $posted['lastname']; ?>" />
 	                                   </div> 
 									   
-									   <div class="controls">
+									   <div class="controls col-md-6 email default-margin">
 											<label class="control-label">Email:</label>
 	                                       <input class="billing-address-email form-control" name="email" id="email" value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" />
 	                                   </div> 
 									   
-									   <div class="controls">
+									   <div class="controls col-md-6 phone default-margin">
 											<label class="control-label">Phone:</label>
 	                                       <input class="billing-address-phone form-control" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" />
 	                                   </div> 
 									   
-									   <div class="controls">
+									   <div class="controls col-md-6 add1 default-margin">
 											<label class="control-label">Address 1:</label>
 	                                       <input class="billing-address-add1 form-control" name="address1" value="<?php echo (empty($posted['address1'])) ? '' : $posted['address1']; ?>" />
 	                                   </div> 
 									   
-									    <div class="controls">
+									    <div class="controls col-md-6 add2 default-margin">
 											<label class="control-label">Address 2:</label>
 	                                       <input class="billing-address-add2 form-control" name="address1" value="<?php echo (empty($posted['address2'])) ? '' : $posted['address2']; ?>" />
 	                                   </div> 
 
-									   <div style="display:none;" class="controls">
+									   <div style="display:none;" class="controls col-md-6 city default-margin">
 	                                   <label class="control-label">City:</label>
 	                                   <input class="billing-address-city form-control"  name="city" value="<?php echo (empty($posted['city'])) ? '' : $posted['city']; ?>" />
 	                                   </div> 
 									   
-									   <div style="display:none;" class="controls">
+									   <div style="display:none;" class="controls col-md-6 state default-margin">
 	                                     <label class="control-label">State:</label>
 	                                     <input class="billing-address-state form-control" name="state" value="<?php echo (empty($posted['state'])) ? '' : $posted['state']; ?>" />
 	                                    </div> 
 									   
-									   <div style="display:none;" class="controls">
+									   <div style="display:none;" class="controls col-md-6 pincode default-margin">
 	                                     <label class="control-label">Pincode:</label>
 	                                      <input class="billing-address-pincode form-control"name="zipcode" value="<?php echo (empty($posted['zipcode'])) ? '' : $posted['zipcode']; ?>" />
 	                                   </div> 
 									   
-									   <div class="controls">
+									   <div class="controls col-md-6 amt default-margin">
 	                                     <label class="control-label">Amount:</label>
 	                                        <input class="billing-address-amount form-control"name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" />
 	                                  </div> 
+									  </div>
+									 
+									 <div class="row"> 
 									 <?php if(!$hash) { ?>
 							             <div class="form-group col-md-6">
-							                <input name="Submit" type="submit" value="Submit" />
+							               <input name="Cancel" type="button" value="Cancel" />
+							             </div> 
+							             <div class="form-group col-md-6">
+											<input name="Submit" type="submit" value="Submit" />
 							            </div> 
-							            <div class="form-group col-md-6">
-							                <input name="Cancel" type="button" value="Cancel" />
-							            </div> 
+									</div>	
 									<?php } ?>
+								
 								</div>
 							</section>
 						</form>

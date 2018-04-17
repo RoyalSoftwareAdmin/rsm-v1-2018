@@ -26,30 +26,23 @@
 					 <div class="col-md-4">
             		<div class="sign-u">
             			
-							<input type="file" multiple="multiple"  id="file" name="file[]">
+							<input type="file" multiple="multiple"  id="file" name="file[]" class="ff">
 						<div class="clearfix"> </div>
 						</div>
 				
 					 </div>
 
- </div>
-
-					      
-					      	<div class="row">
-					      		<div class="col-md-4 col-md-offset-1">
+					 <div class="col-md-4">
 					      		<div class="sign-u">
 					      			
 				    <input type="button" class="btn btn-info" id="upload" value="Upload File"/>
 				        </div>
 				    </div>
-				      <div class="col-md-4">
-				<div class="sign-u">
 
-					<input type="button" class="btn btn-info" id="view" value="View  Files"/>
-					<div class="clearfix"> </div>
-				</div>
-				</div>
-               </div>
+ </div>
+
+					      
+					      	
            
                 </form>
            </div>

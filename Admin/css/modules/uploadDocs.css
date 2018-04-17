@@ -6,4 +6,15 @@
 	.sign-u {
 	padding: 5px;
 	}
-	
+	 select {
+    padding: 5px;
+    border-radius: 5px;
+}
+.sign-u input[type="file"] {
+	padding: 5px;
+    border-radius: 5px;
+    width:100%;
+    height: 100%;
+    border: 1px solid #B9B9B9;
+
+	}

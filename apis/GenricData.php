@@ -200,7 +200,27 @@
 	      		 echo json_encode(array('Status' => 'Failure'));
 	   		} 
 			exit();
-		}		
+		}	
+
+         	// Settings screen api starts here
+
+             if($_POST["layout"] == "1006"){ 
+             	$userName = $_POST["userName"]; 
+             	$password = $_POST["password"];	
+             	$password = md5($password);
+           $query = "update rsm_login set password='".$password."' where userName='".$userName."'"; 
+             	$res = query($query); 
+             	if($res){ 
+             		echo json_encode(array('Status' => "1" )); 
+             	}
+             		else{ 
+             			echo json_encode(array('Status' => mysqli_error($conn))); 
+             	} 
+             	}
+
+
+        // Settings screen api end here
+
 
 	}
 

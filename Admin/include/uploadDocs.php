@@ -26,7 +26,8 @@
 					 <div class="col-md-4">
             		<div class="sign-u">
             			
-							<input type="file" multiple="multiple"  id="file" name="file[]" class="ff">
+							<input type="file" multiple="multiple"  id="files" name="file[]">
+							<pre id="filelist" style="display:none;"></pre>
 						<div class="clearfix"> </div>
 						</div>
 				
@@ -56,4 +57,6 @@
     </div>      
     <div class="clearfix"> </div>
 </div>
+
+	
 <script src="js/modules/uploadDocs.js"></script>  

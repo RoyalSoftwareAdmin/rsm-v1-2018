@@ -58,7 +58,6 @@
         var hash = '<?php echo $hash ?>';
         $(document).ready(function(){
 	        function submitPayuForm() {
-	        	debugger;
 	          if(hash == '') {
 	            return;
 	          }          
@@ -105,7 +104,7 @@
 									   
 									   <div class="controls col-md-6 email default-margin">
 											<label class="control-label">Email:</label>
-	                                       <input class="billing-address-email form-control" name="email" id="email" value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" />
+	                                       <input class="billing-address-email form-control" readonly name="email" id="email" value="<?php echo (empty($posted['email'])) ? '' : $posted['email']; ?>" />
 	                                   </div> 
 									   
 									   <div class="controls col-md-6 phone default-margin">
@@ -169,3 +168,4 @@
     </div>
 </div>      
     <div class="clearfix"> </div> 
+    <script type="text/javascript" src="js/modules/payment.js"></script>

@@ -19,16 +19,16 @@
 					</div>
 					<div class="modal-body">
 						<div class="row row1">					
-							<label>File Name</label><input type="filename" class="filename" id="filename" name="filename" placeholder="" >
+							<label>File Name</label><label class="fileName" ></label>
 						</div> 
 					
 						
 						<div class="row"> 
-							<label> No Of Copies</label> <input type="text" class="inputnum" id="inputnum" name="inputnum" placeholder="No of Copies" >
+							<label> No Of Copies</label> <input type="text" class="copies" id="copies" name="copies" value=1 >
 						</div> 
 						
 						<div class="row"> 
-							<label> Amount </label> <input type="text" class="inputamt" id="inputamt" name="inputamt" placeholder="" >
+							<label> Total Amount </label> <lsbel type="text" class="total"> </lsbel>
 						</div> 
 						
 						

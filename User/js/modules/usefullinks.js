@@ -1,4 +1,4 @@
-
+var price = 0;
 $(document).ready(function(){
 	$.ajax({
 		url : "../apis/GenricData.php",
@@ -18,18 +18,18 @@ $(document).ready(function(){
 			console.log(result);
 		}
 	})
+	$("#copies").on("blur", function(){ 
+		var num = $("#copies").val(), 
+			amount = num * price; 
+		$(".total").html(amount);
+		localStorage.setItem("Amount", amount); 
+	});	
 })
 function redirecttopage(jsonValue) { 
+	localStorage.setItem("Amount", 0);
     var SelectedData = jsonValue.File_Name;
-	var price = jsonValue.Price; 
-	$(".row1 input").val(jsonValue.File_Name); 
-	$("#inputamt").val(jsonValue.Price);
-	$("#download").modal("show");	
-	
-	$("#inputnum").on("keyup", function(){ 
-	var num = $("#inputnum").val(), 
-	amount = num * price; 
-	$("#inputamt").val(amount);	
-	localStorage.setItem("Amount", amount); 
-	});		
+	price = jsonValue.Price; 
+	$(".fileName").html(jsonValue.File_Name);
+		$(".total").html(price); 
+	$("#download").modal("show");			
 }

@@ -110,37 +110,37 @@
 									   
 									   <div class="controls col-md-6 phone default-margin">
 											<label class="control-label">Phone:</label>
-	                                       <input class="billing-address-phone form-control" name="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" />
+	                                       <input class="billing-address-phone form-control" name="phone" id="phone" value="<?php echo (empty($posted['phone'])) ? '' : $posted['phone']; ?>" />
 	                                   </div> 
 									   
 									   <div class="controls col-md-6 add1 default-margin">
 											<label class="control-label">Address 1:</label>
-	                                       <input class="billing-address-add1 form-control" name="address1" value="<?php echo (empty($posted['address1'])) ? '' : $posted['address1']; ?>" />
+	                                       <input class="billing-address-add1 form-control" name="address1" id="add1" value="<?php echo (empty($posted['address1'])) ? '' : $posted['address1']; ?>" />
 	                                   </div> 
 									   
 									    <div class="controls col-md-6 add2 default-margin">
 											<label class="control-label">Address 2:</label>
-	                                       <input class="billing-address-add2 form-control" name="address1" value="<?php echo (empty($posted['address2'])) ? '' : $posted['address2']; ?>" />
+	                                       <input class="billing-address-add2 form-control" name="address1" id="add2" value="<?php echo (empty($posted['address2'])) ? '' : $posted['address2']; ?>" />
 	                                   </div> 
 
 									   <div style="display:none;" class="controls col-md-6 city default-margin">
 	                                   <label class="control-label">City:</label>
-	                                   <input class="billing-address-city form-control"  name="city" value="<?php echo (empty($posted['city'])) ? '' : $posted['city']; ?>" />
+	                                   <input class="billing-address-city form-control"  name="city" id="city" value="<?php echo (empty($posted['city'])) ? '' : $posted['city']; ?>" />
 	                                   </div> 
 									   
 									   <div style="display:none;" class="controls col-md-6 state default-margin">
 	                                     <label class="control-label">State:</label>
-	                                     <input class="billing-address-state form-control" name="state" value="<?php echo (empty($posted['state'])) ? '' : $posted['state']; ?>" />
+	                                     <input class="billing-address-state form-control" name="state" id="state" value="<?php echo (empty($posted['state'])) ? '' : $posted['state']; ?>" />
 	                                    </div> 
 									   
 									   <div style="display:none;" class="controls col-md-6 pincode default-margin">
 	                                     <label class="control-label">Pincode:</label>
-	                                      <input class="billing-address-pincode form-control"name="zipcode" value="<?php echo (empty($posted['zipcode'])) ? '' : $posted['zipcode']; ?>" />
+	                                      <input class="billing-address-pincode form-control"name="zipcode" id="pincode" value="<?php echo (empty($posted['zipcode'])) ? '' : $posted['zipcode']; ?>" />
 	                                   </div> 
 									   
 									   <div class="controls col-md-6 amt default-margin">
 	                                     <label class="control-label">Amount:</label>
-	                                        <input class="billing-address-amount form-control"name="amount" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" />
+	                                        <input class="billing-address-amount form-control"name="amount" id="amt" value="<?php echo (empty($posted['amount'])) ? '' : $posted['amount'] ?>" />
 	                                  </div> 
 									  </div>
 									 

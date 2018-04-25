@@ -1,8 +1,10 @@
 $(document).ready(function(){
     var email = JSON.parse(localStorage.getItem("session")).email;
     var name = JSON.parse(localStorage.getItem("session")).fname;
+    
     $("#email").val(email);
     $("#name").val(name);
+      
      $.ajax({
             url: '../apis/AdminData.php',
             type: 'POST',
@@ -22,6 +24,7 @@ $(document).ready(function(){
 
     $('#upload').on('click', function(e){
           var formData = new FormData($(this).parents('form')[0]);
+
             $.ajax({
                 url: 'include/upload.php',
                 data: formData,
@@ -34,6 +37,10 @@ $(document).ready(function(){
             });
             return false;
     });
+
+
+
+
 
     $('#view').on('click', function(e){
         $.ajax({
@@ -53,6 +60,22 @@ $(document).ready(function(){
 })
 
 
+
+
+
+
+$(document).ready(function(){
+    
+function testInput(event) {
+   var value = String.fromCharCode(event.which);
+   var pattern = new RegExp(/[0-9]/i);
+   return pattern.test(value);
+}
+$('#amount').bind('keypress', testInput);
+
+
+  })
+
     document.getElementById('files').addEventListener('change', function(e) {
   var list = document.getElementById('filelist');
   list.innerHTML = '';
@@ -62,3 +85,5 @@ $(document).ready(function(){
   if (list.innerHTML == '') list.style.display = 'none';
   else list.style.display = 'block';
 });
+
+

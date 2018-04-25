@@ -62,11 +62,12 @@
     <div class="container">
    <div class="row">
    
-   	<div class="col-md-2">
-   			<div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link" >Question 1</button></a>
-    </div>
-    <div class="qtnleft">
+   	<div class="col-md-2 ">
+      <div id="questionParent">
+     </div>
+  
+  
+    <!--<div class="qtnleft">
    		<a href=""><button type="button" class="btn btn-link">Question 2</button></a>
     </div>
     <div class="qtnleft">
@@ -107,7 +108,7 @@
     </div>
       <div class="qtnleft">
    		<a href=""><button type="button" class="btn btn-link">Question 15</button></a>
-    </div>
+    </div>-->
    		
    	
    	</div>
@@ -136,10 +137,9 @@
    	</div>
    </div>
    	<div class="col-md-2">
-   		<div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link" >Question 16</button></a>
-    </div>
-    <div class="qtnright">
+       <div id="questionParent1">
+   		 </div>
+    <!--<div class="qtnright">
    		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 17</button></a>
     </div>
       <div class="qtnright">
@@ -183,7 +183,7 @@
     </div>
    		
    	</div>	
-   	</div>
+   	</div>-->
    	</div>
 
 
@@ -193,4 +193,12 @@
 	</div>
 	
 </body>
-</html>
+
+
+
+
+
+<script type="text/javascript" src="js/common/lists.js"></script>
+<script src ="js/modules/taketest.js"> </script>
+
+   

@@ -303,6 +303,7 @@ ul.dropdown-menu{
 	position: relative;
     z-index: 1;
     display: inline-block;
+    visibility: hidden;
 }
 .sb-search-input {
     outline: none;
@@ -849,10 +850,13 @@ ul.dropdown-menu {
 }
 span.prfil-img img,.activity-img img,.media>.pull-left img,.inbox-page img {
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+
 }
 .profile_details ul li ul.dropdown-menu.drp-mnu {
     padding: 1em;
@@ -7842,7 +7846,7 @@ h4.asd label {
 		margin-right: 2em;
 	}
 	.cbp-spmenu-push div#page-wrapper {
-		padding: 9em 1em 2em;
+		padding: 2em 1em 2em;
 	}
 	.input__label {
 		width: 90%;
@@ -7940,6 +7944,7 @@ h4.asd label {
 	.mail-right {
 		width: 20%;
 	}
+
 }
 @media(max-width:384px){
 	.profile_details {
@@ -8529,3 +8534,5 @@ h4.asd label {
 .text1 a{
   clear: all;
 }
+ 
+

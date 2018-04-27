@@ -34,8 +34,13 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 
 	</head> 
 	<body class="cbp-spmenu-push">
+		
 		<div class="main-content">
+			<div class="logo1">
+			<img src= "images/logo.png" />
+		</div>
 			<div id="page-wrapper">
+				
 				<div class="main-page signup-page">
 					<h2 class="title1">SignUp Here</h2>
 					<div class="sign-up-row widget-shadow">

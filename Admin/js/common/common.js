@@ -131,3 +131,14 @@ $(document).ready(function() {
 $(document).ready( function(){
 	$(".loggeduser").html(JSON.parse(localStorage.getItem("session")).fname);
 })
+
+$(document).ready( function(){
+	if (JSON.parse(localStorage.getItem("session")).gender == "Male" ) 
+	{ 
+		$(".profile_img img").attr("src", "../images/male.png"); 
+	} 
+		else 
+		{ 
+			$(".profile_img img").attr("src", "../images/female.png");
+	}
+});

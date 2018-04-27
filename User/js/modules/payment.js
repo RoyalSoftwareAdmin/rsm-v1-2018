@@ -10,7 +10,7 @@ $.ajax({
 				result = JSON.parse(result);
 				$("#firstname").val(result.Name);
 				$("#email").val(result.EMail);
-				$("#add1").val(result.Location);
+				$("#state").val(result.Location);
 				$("#phone").val(result.Mobile_Number);
         if (amount !== null || amount == 0){
           $("#amt").val(amount);

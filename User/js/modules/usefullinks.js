@@ -18,10 +18,10 @@ $(document).ready(function(){
 			console.log(result);
 		}
 	})
-	$("#copies").on("blur", function(){ 
+	$("#copies").on("keyup", function(){ 
 		var num = $("#copies").val(), 
 			amount = num * price; 
-		$(".total").html(amount);
+		$(".total").html(amount +" Rs ");
 		localStorage.setItem("Amount", amount); 
 	});	
 })
@@ -30,6 +30,6 @@ function redirecttopage(jsonValue) {
     var SelectedData = jsonValue.File_Name;
 	price = jsonValue.Price; 
 	$(".fileName").html(jsonValue.File_Name);
-		$(".total").html(price); 
+		$(".total").html(price+" Rs "); 
 	$("#download").modal("show");			
 }

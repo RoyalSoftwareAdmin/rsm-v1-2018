@@ -24,7 +24,8 @@
 		color:#0DA8EA;
 	}
 .btn1{
-		margin-left:10%;
+		margin-left: 5%;
+		padding: 0.8em;
 		color:#0DA8EA;
 		border: 1px solid #C3C3C3;
 	}
@@ -81,6 +82,23 @@
 	margin-left: 30%;
 
 }
+ p 
+{ 
+ 
+font-size: 24px; 
+margin:auto 0;
+
+}
+.blink_me 
+{ 
+	animation: blinker 1s linear infinite;
+	 }
+ @keyframes blinker 
+ { 
+ 	50% { 
+ 		opacity: 0;
+ 		 } 
+} 
 
 
 

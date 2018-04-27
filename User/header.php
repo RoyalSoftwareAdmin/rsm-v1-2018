@@ -201,7 +201,8 @@ session_start();
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="../images/2.jpg" alt=""> </span> 
+									<span class="prfil-img"><img src="../images/.jpg" alt=""> </span>
+
 									<div class="user-name">
 										<p>User</p>
 										<span class="loggeduser"></span>
@@ -277,4 +278,5 @@ session_start();
 		         </div>
 		        <div class="clearfix"> </div>
 		    </div>
-                
+		   
+</script>

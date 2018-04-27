@@ -32,11 +32,21 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 	<link rel="stylesheet" type="text/css" href="css/modules/signup.css">
 
 	</head> 
+	
 	<body class="cbp-spmenu-push">
+
+			 
+		
+
 		<div class="main-content">
+           <div class="logo1">
+			<img src= "images/logo.png"/>
+		</div>
 			<!-- main content start-->
 			<div id="page-wrapper">
+			
 				<div class="main-page login-page ">
+
 					<h2 class="title1">Login</h2>
 					<div class="widget-shadow">
 						<div class="login-body">
@@ -63,6 +73,8 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 				</div>
 			</div>
 		 </div>  
+
+
 	 	<?php include_once("footer.php"); ?>
 	 	<div class="modal fade" id="forgotPass" tabindex="-1" role="dialog" aria-labelledby="forgotPass">
 			<div class="modal-dialog" role="document">

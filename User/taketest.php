@@ -15,8 +15,7 @@
 	<link href="../css/font-awesome.css" rel="stylesheet"> 
 	<!-- //font-awesome icons CSS-->
 
-	
-	 
+
 	 <!-- js-->
 	<script src="../js/jquery-1.11.1.min.js"></script>
 	<script src="../js/modernizr.custom.js"></script>	
@@ -53,6 +52,9 @@
 				<label class="cat">Category :</label>
 				<label class="vision">Division :</label>
 				<label class="left">Time Left :</label>
+				
+				<p id="demo"></p> 
+	
 				<button type="button" class="btn btn-link btn1" >Save & Exit</button>
                  </div>
              </div>

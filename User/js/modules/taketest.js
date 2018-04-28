@@ -1,5 +1,31 @@
 
 
+	 	var countDownDate = new Date().getTime(); 
+	 	var x = setInterval(function() 
+	 		{ 
+	 			var now = new Date(); now.setMinutes(now.getMinutes() - 30); 
+
+	 			now = now.getTime(); 
+	 			var left = countDownDate - now;
+	 			 var minutes = Math.floor((left % (1000 *60 *60)) / (1000 * 60)); 
+	 			 var seconds = Math.floor((left % (1000 * 60)) / 1000);
+	 			  if ( minutes == 3 ) 
+	 			  	{ 
+	 			  		$("#demo").css("color","#FF0000"); 
+	 			} 
+	 			if ( minutes == 0 ) 
+	 				{ 
+	 					$("#demo").addClass("blink_me");
+	 					 } 
+	 					 document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s "; 
+	 					 if (left < 0) 
+	 					 	{ 
+	 					 		clearInterval(x); document.getElementById("demo").innerHTML = "You are Done!!"; 
+	 					} 
+
+	 				}, 1000); 
+
+				
 var Question = ""; 
 for ( var i = 1 ; i<= 15 ; i++) 
 	{ 

@@ -97,7 +97,7 @@
 											<label class="control-label">First Name:</label>
 											<input class="billing-address-name form-control"  name="firstname" id="firstname" value="<?php echo (empty($posted['firstname'])) ? '' : $posted['firstname']; ?>" />
 										</div>
-										<div class="controls col-md-6 lname default-margin">
+										<div style="display:none;" class="controls col-md-6 lname default-margin">
 											<label class="control-label">Last Name:</label>
 	                                        <input class="billing-address-lname form-control" name="lastname" id="lastname" value="<?php echo (empty($posted['lastname'])) ? '' : $posted['lastname']; ?>" />
 	                                   </div> 
@@ -117,7 +117,7 @@
 	                                       <input class="billing-address-add1 form-control" name="address1" id="add1" value="<?php echo (empty($posted['address1'])) ? '' : $posted['address1']; ?>" />
 	                                   </div> 
 									   
-									    <div class="controls col-md-6 add2 default-margin">
+									    <div style="display:none;" class="controls col-md-6 add2 default-margin">
 											<label class="control-label">Address 2:</label>
 	                                       <input class="billing-address-add2 form-control" name="address1" id="add2" value="<?php echo (empty($posted['address2'])) ? '' : $posted['address2']; ?>" />
 	                                   </div> 
@@ -127,7 +127,7 @@
 	                                   <input class="billing-address-city form-control"  name="city" id="city" value="<?php echo (empty($posted['city'])) ? '' : $posted['city']; ?>" />
 	                                   </div> 
 									   
-									   <div style="display:none;" class="controls col-md-6 state default-margin">
+									   <div  class="controls col-md-6 state default-margin">
 	                                     <label class="control-label">State:</label>
 	                                     <input class="billing-address-state form-control" name="state" id="state" value="<?php echo (empty($posted['state'])) ? '' : $posted['state']; ?>" />
 	                                    </div> 

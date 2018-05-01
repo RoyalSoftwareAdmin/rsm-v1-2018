@@ -1,13 +1,3 @@
-<!--
-Author: Madhusudhana R K
-Author URL: http://www.royalsoftwaresolution.com
-
-License: Licence owned by Royal Softwares
-
-License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
-
--->
-
 <?php 
 session_start();
 	if( !isset($_SESSION["user"]) ){
@@ -20,6 +10,16 @@ session_start();
           header("Location: Company/index.php");
     }
 ?>
+<!--
+Author: Madhusudhana R K
+Author URL: http://www.royalsoftwaresolution.com
+
+License: Licence owned by Royal Softwares
+
+License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
+
+-->
+
 <!DOCTYPE HTML>
 <html>
 <head>

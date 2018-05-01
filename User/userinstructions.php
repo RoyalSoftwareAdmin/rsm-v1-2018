@@ -110,8 +110,8 @@
 <div class="row">
 		<div class="col-md-8 col-md-offset-1">
        <div id="sub">
-  	<button class="btn btn-primary btns">Submit</button>
-  </div>
+      	<button class="btn btn-primary btns"  disabled="disabled">Submit</button>
+      </div>
   	
   </div>
 </div>

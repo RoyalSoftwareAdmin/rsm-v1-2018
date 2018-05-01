@@ -1,14 +1,14 @@
   $(document).ready(function() {
     
-        var $submit = $("#sub").hide(),
-            $cbs = $('input[name="checkbox"]').click(function() {
-                $submit.toggle( $cbs.is(":checked") );
+           $cbs = $('input[name="checkbox"]').click(function() {
+                if($cbs.is(":checked")) {
+	                $("#sub button").removeAttr("disabled");	
+	            }else{
+	            	$("#sub button").attr("disabled", "disabled");	
+	            }
             });
-    
-    });
+    	$(".btn").on("click", function(){
+			 window.location.href = "UserDetails.php";  
+		})
 
-$(document).ready(function(){
-	$(".btn").on("click", function(){
-		 window.location.href = "UserDetails.php";  
-	})
-})
+    });

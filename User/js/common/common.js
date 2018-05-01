@@ -136,10 +136,10 @@ $(document).ready( function(){
 $(document).ready( function(){
 	if (JSON.parse(localStorage.getItem("session")).gender == "Male" ) 
 	{ 
-		$(".profile_img img").attr("src", "../images/male.png"); 
+		$(".prfil-img").html('<img src="../images/male.png" alt="">'); 
 	} 
 		else 
 		{ 
-			$(".profile_img img").attr("src", "../images/female.png");
+			$(".prfil-img").html('<img src="../images/female.png" alt="">'); 
 	}
 });

@@ -42,7 +42,8 @@ $("#submit").on("click", function(){
     		method:"POST",
     		data : { "layout" : 1006 , "userName":userName , "password":password},
     		success: function(result){
-				console.log(result);	
+				result = JSON.parse(result);
+				(result.Status == 1) ? $(".logout").click() : "";
     		},
     		error: function(error){
 

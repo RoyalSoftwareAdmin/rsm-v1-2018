@@ -1,13 +1,3 @@
-<!--
-Author: Madhusudhana R K
-Author URL: http://www.royalsoftwaresolution.com
-
-License: Licence owned by Royal Softwares
-
-License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
-
--->
-
 <?php 
 session_start();
 	if( !isset($_SESSION["user"]) ){
@@ -19,7 +9,18 @@ session_start();
         else
           header("Location: ../Company/index.php");
     }
-?>
+?>π
+<!--
+Author: Madhusudhana R K
+Author URL: http://www.royalsoftwaresolution.com
+
+License: Licence owned by Royal Softwares
+
+License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
+
+-->
+
+
 
 <!DOCTYPE HTML>
 <html>
@@ -220,7 +221,7 @@ session_start();
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="../images/.jpg" alt=""> </span> 
+									<span class="prfil-img"></span> 
 									<div class="user-name">
 										<p>User</p>
 										<span class="loggeduser"></span>

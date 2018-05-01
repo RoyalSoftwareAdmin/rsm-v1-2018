@@ -202,7 +202,21 @@
 	      		 echo json_encode(array('Status' => 'Failure'));
 	   		} 
 			exit();
-		}		
+		}	
+
+		if($_POST["layout"] == "1006"){
+
+			$userName = $_POST["userName"];
+			$password = md5 ($_POST["password"]);
+			
+			$query = "update rsm_login set Password='".$password."' where userName='".$userName."'";
+			$res = query($query);
+				if($res){
+					echo json_encode(array('Status' => "1" ));
+				}else{
+					echo json_encode(array('Status' => mysqli_error($conn)));
+				}
+		}	
 
 	}
 

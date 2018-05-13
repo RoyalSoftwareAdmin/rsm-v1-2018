@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+ /* if( !isset($_SESSION["user"]) ){
+
+        exit(header("Location: userDetails.php"));
+
+    } 
+    echo "taketest";  */  
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -41,15 +51,22 @@
 	<script src="../js/light.js"></script>
 	<script src="../js/jquery.dataTables.js"></script>
 	<script src="../js/dataTables.bootstrap.js"></script>
-	
+	<style>
+  label  {
+  
+ margin:auto 0 ;
+}
+</style>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="top">
-				<label class="name">Name :</label>
+				<label class="name">Name:</label>
+        <label class="username"></label>
 				<label class="cat">Category :</label>
+            <label class="usercat"></label>
 				<label class="vision">Division :</label>
 				<label class="left">Time Left :</label>
 				

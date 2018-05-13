@@ -106,11 +106,11 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
                 <ul class="treeview-menu">
 			        <li data-val="Technical"><a href="?file=technical"><i class="fa fa-angle-right"></i> Technical</a></li>
 			 	    <li data-val="Analytical"><a href="?file=analytical"><i class="fa fa-angle-right"></i> Analytical</a></li>
-		        	<li><a href="?file=logical"><i class="fa fa-angle-right"></i> Logical</a></li>
-		          	<li><a href="?file=aptitude"><i class="fa fa-angle-right"></i> Aptitude </a></li>
-		          	<li><a href="?file=ca"><i class="fa fa-angle-right"></i> Current Affairs</a></li>
-		          	<li><a href="?file=cs"><i class="fa fa-angle-right"></i> Company Specific</a></li>
-		          	<li><a href="?file=aio"><i class="fa fa-angle-right"></i> All in One</a></li>
+		        	<li data-val="Logical"><a href="?file=logical"><i class="fa fa-angle-right"></i> Logical</a></li>
+		          	<li data-val="Aptitude"><a href="?file=aptitude"><i class="fa fa-angle-right"></i> Aptitude </a></li>
+		          	<li data-val="Current Affairs"><a href="?file=ca"><i class="fa fa-angle-right"></i> Current Affairs</a></li>
+		          	<li data-val=" Company Specific"><a href="?file=cs"><i class="fa fa-angle-right"></i> Company Specific</a></li>
+		          	<li data-val="All in One"><a href="?file=aio"><i class="fa fa-angle-right"></i> All in One</a></li>
             	</ul>
               </li>	
               <li class="treeview">

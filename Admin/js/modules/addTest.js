@@ -64,3 +64,21 @@ $(document).ready(function(){
             
     });
 })
+
+
+ function Validate() {
+  var questionss= document.getElementById("questionss").value;
+  var Choice1 = document.getElementById("Choice1").value;
+   var Choice2 = document.getElementById("Choice2").value;
+  var Choice3 = document.getElementById("Choice3").value;
+   var Choice4= document.getElementById("Choice4").value;
+
+if(questionss !== "" && Choice1 !== "" && Choice2 !==  "" && Choice3 !== "" && Choice4 !== "") {
+    document.getElementById("error").innerHTML = "";
+  }
+  else {
+    document.getElementById("error").innerHTML = "error message";
+  }
+}
+
+

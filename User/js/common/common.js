@@ -120,6 +120,7 @@ $(document).ready(function() {
 
  //  	}
    	$(".logout").on("click", function(){
+   		localStorage.clear()
    		$.ajax({
 		 	url : "../apis/GenricData.php",
 		 	data : {"layout" : "logout"},
@@ -143,3 +144,17 @@ $(document).ready( function(){
 			$(".prfil-img").html('<img src="../images/female.png" alt="">'); 
 	}
 });
+
+
+$(document).ready( function(){
+	$('.treeview-menu li').on('click',function(){
+localStorage.setItem('section', $(this).attr('data-val'))
+})
+$(".divParent button").on("click", function(){
+localStorage.setItem('div', $(this).attr('data-val'))
+
+})
+
+})
+
+

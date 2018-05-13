@@ -9,7 +9,7 @@ session_start();
         else
           header("Location: ../Company/index.php");
     }
-?>π
+?>
 <!--
 Author: Madhusudhana R K
 Author URL: http://www.royalsoftwaresolution.com

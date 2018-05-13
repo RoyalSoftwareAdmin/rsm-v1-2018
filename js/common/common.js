@@ -120,6 +120,7 @@ $(document).ready(function() {
 
  //  	}
   	$(".logout").on("click", function(){
+  		localStorage.clear()
   		$.ajax({
 			url : "apis/GenricData.php",
 			data : {"layout" : "logout"},

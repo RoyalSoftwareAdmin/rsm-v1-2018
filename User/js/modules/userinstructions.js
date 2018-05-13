@@ -8,7 +8,24 @@
 	            }
             });
     	$(".btn").on("click", function(){
-			 window.location.href = "UserDetails.php";  
+			/* window.location.href = "UserDetails.php";  */
+
+         var user = JSON.parse(localStorage.getItem("session"));
+              
+                 if ( user == null)
+                 {
+             window.location.href ="UserDetails.php";
+                    }
+                else
+                      {
+          window.location.href = "taketest.php";
+                }
+
+
+
+
+
+
 		})
 
     });

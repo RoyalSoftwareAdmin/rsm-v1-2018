@@ -7,47 +7,47 @@
                 
             
       
-    <div class="container">
+    <div class="container divParent">
      <div class="row">
        
        <div class="col-md-4">
-         <a href=""><button class="comm">Web Developer</button></a>
+         <a href="userinstructions.php"><button class="comm" data-val="1">Web Developer</button></a>
        </div>
        
        <div class="col-md-4">
-        <a href=""><button class="comm">Backend Developer</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="2">Backend Developer</button></a>
        </div>
        
        <div class="col-md-4">
-        <a href=""><button class="comm">System Analyst</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="3">System Analyst</button></a>
        </div>
        </div>
        
       <div class="row"> 
        
        <div class="col-md-4">
-       <a href=""> <button class="comm">Business Analyst</button></a>
+       <a href="userinstructions.php"> <button class="comm" data-val="4">Business Analyst</button></a>
        </div>
        
         <div class="col-md-4">
-        <a href=""><button class="comm">Technical Analyst</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="5">Technical Analyst</button></a>
        </div>
        <div class="col-md-4">
-        <a href=""><button class="comm">Network Analyst</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="6">Network Analyst</button></a>
        </div>
      </div>
      
      <div class="row"> 
        
        <div class="col-md-4">
-       <a href=""> <button class="comm">Technical Sales</button></a>
+       <a href="userinstructions.php"> <button class="comm" data-val="7">Technical Sales</button></a>
        </div>
        
         <div class="col-md-4">
-        <a href=""><button class="comm">Software Tester</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="8">Software Tester</button></a>
        </div>
        <div class="col-md-4">
-        <a href=""><button class="comm">Technical Writer</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="9">Technical Writer</button></a>
        </div>
      </div>
     </div>

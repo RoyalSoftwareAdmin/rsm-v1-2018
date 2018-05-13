@@ -64,9 +64,10 @@
 				</div>
 					
 				<div class="col-md-12 btnsParent">
-				 	<button class="btn btn-success btns">Save</button>
+					<p id="error"></p>
+				 	<button class="btn btn-success btns" onclick ="Validate()">Submit</button>
 				  	<button class="btn btn-danger btns">Clear</button>
-				  	<div class="error"></div>
+				  	
 				</div>
 		    </div>			
 		</div>	

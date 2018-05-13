@@ -30,15 +30,13 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 	
 	<link href="css/custom.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/modules/signup.css">
+<style>
 
+</style>
 	</head> 
 	
 	<body class="cbp-spmenu-push">
-
-			 
-		
-
-		<div class="main-content">
+<div class="main-content">
            <div class="logo1">
 			<img src= "images/logo.png"/>
 		</div>

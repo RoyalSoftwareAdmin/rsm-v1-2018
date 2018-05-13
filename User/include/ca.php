@@ -7,47 +7,47 @@
                 
             
       
-    <div class="container">
+    <div class="container divParent">
      <div class="row">
        
        <div class="col-md-4">
-         <a href=""><button class="comm">Sports</button></a>
+         <a href="userinstructions.php"><button class="comm" data-val="20">Sports</button></a>
        </div>
        
        <div class="col-md-4">
-        <a href=""><button class="comm">Science</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="21">Science</button></a>
        </div>
        
        <div class="col-md-4">
-        <a href=""><button class="comm">Business</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="22">Business</button></a>
        </div>
        </div>
        
       <div class="row"> 
        
        <div class="col-md-4">
-       <a href=""> <button class="comm">Politics</button></a>
+       <a href="userinstructions.php"> <button class="comm" data-val="23">Politics</button></a>
        </div>
        
         <div class="col-md-4">
-        <a href=""><button class="comm">Awards</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="24">Awards</button></a>
        </div>
        <div class="col-md-4">
-        <a href=""><button class="comm">International</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="25">International</button></a>
        </div>
      </div>
      
      <div class="row"> 
        
        <div class="col-md-4">
-       <a href=""> <button class="comm">General</button></a>
+       <a href="userinstructions.php"> <button class="comm" data-val="26">General</button></a>
        </div>
        
         <div class="col-md-4">
-        <a href=""><button class="comm">Economy</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="27">Economy</button></a>
        </div>
        <div class="col-md-4">
-        <a href=""><button class="comm">ALL</button></a>
+        <a href="userinstructions.php"><button class="comm" data-val="28">ALL</button></a>
        </div>
      </div>
     </div>

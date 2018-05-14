@@ -104,11 +104,11 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-			        <li data-val="Technical"><a href="?file=technical"><i class="fa fa-angle-right"></i> Technical</a></li>
-			 	    <li data-val="Analytical"><a href="?file=analytical"><i class="fa fa-angle-right"></i> Analytical</a></li>
-		        	<li data-val="Logical"><a href="?file=logical"><i class="fa fa-angle-right"></i> Logical</a></li>
-		          	<li data-val="Aptitude"><a href="?file=aptitude"><i class="fa fa-angle-right"></i> Aptitude </a></li>
-		          	<li data-val="Current Affairs"><a href="?file=ca"><i class="fa fa-angle-right"></i> Current Affairs</a></li>
+			        <li data-val="1"><a href="?file=technical"><i class="fa fa-angle-right"></i> Technical</a></li>
+			 	    <li data-val="2"><a href="?file=analytical"><i class="fa fa-angle-right"></i> Analytical</a></li>
+		        	<li data-val="3"><a href="?file=logical"><i class="fa fa-angle-right"></i> Logical</a></li>
+		          	<li data-val="4"><a href="?file=aptitude"><i class="fa fa-angle-right"></i> Aptitude </a></li>
+		          	<li data-val="5"><a href="?file=ca"><i class="fa fa-angle-right"></i> Current Affairs</a></li>
 		          	<li data-val=" Company Specific"><a href="?file=cs"><i class="fa fa-angle-right"></i> Company Specific</a></li>
 		          	<li data-val="All in One"><a href="?file=aio"><i class="fa fa-angle-right"></i> All in One</a></li>
             	</ul>

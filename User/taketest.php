@@ -66,8 +66,10 @@ session_start();
 				<label class="name">Name:</label>
         <label class="username"></label>
 				<label class="cat">Category :</label>
-            <label class="usercat"></label>
+            <label id="cat_id"></label>
+
 				<label class="vision">Division :</label>
+        <label class="div"></label>
 				<label class="left">Time Left :</label>
 				
 				<p id="demo"></p> 

@@ -3,6 +3,17 @@
 <head>
 	<title>User Instructions</title>
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="../css/style.css" rel='stylesheet' type='text/css' />
+		<link href="../css/font-awesome.css" rel="stylesheet"> 
+		<link href='../css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/modernizr.custom.js"></script>
+		<script src="../js/metisMenu.min.js"></script>
+		<script src="../js/custom.js"></script>
+		
+		<link href="../css/custom.css" rel="stylesheet">
+		
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/Bootstrap.css" rel='stylesheet' type='text/css' />
@@ -20,7 +31,7 @@
 	
 	
 	<!--webfonts-->
-	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	<!--<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">-->
 	<!--//webfonts--> 
 
 	
@@ -87,7 +98,7 @@
           </ul>
           <input type="checkbox" id="idcheck" name="checkbox" ><label class="last">I agree to the company's <span class="terms">Terms and Conditions</span></label>
           <div id="sub">
-        <button class="btn btn-primary btns"  disabled="disabled">Submit</button>
+        <button class="btn btn-primary btns" disabled="disabled">Submit</button>
       </div>
 						</div>
 
@@ -97,5 +108,6 @@
 		 </div>  
   
 </body>
+
 <script src="js/modules/userinstructions.js"></script> 
 </html>

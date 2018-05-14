@@ -29,8 +29,8 @@
 var Question = ""; 
 for ( var i = 1 ; i<= 15 ; i++) 
 	{ 
-		Question += '<div class="qtnleft"><a href=""><button type="button" class="btn btn-link"  data-val=class'+i+'>Question '+i+' <span><img src="../images/wrong.jpg" style="width:30px";></span></button></a></div>'; 
-	} 
+	Question += '<div class="qtnleft"><a href=""><button type="button" class="btn btn-link"  data-val=class'+i+'>Question '+i+' <span><img src="../images/wrong.jpg" style="width:30px";></span></button></a></div>'; 
+ }
 	$("#questionParent").html(Question);
 
   	var Question = ""; 
@@ -44,8 +44,44 @@ for ( var i = 16 ; i<= 30 ; i++)
 
 	$(document).ready( function(){
 	$(".username").html(JSON.parse(localStorage.getItem("session")).fname);
+	var cat_id = localStorage.getItem("section");
+var div_id = localStorage.getItem("div");
+
+$.ajax({
+url : "../apis/GenricData.php",
+method : "POST",
+data : {"layout" : 1007 ,"cat_id" : cat_id , "div_id" : div_id},
+success : function(data){
+
+}
+
 })
+})
+
+
 	
+
+
+
+
+
+	/*$(document).ready(function(){
+var cat_id = localStorage.getItem("section");
+var div_id = localStorage.getItem("div");
+
+
+/*$.ajax({
+url : "../apis/GenricData.php",
+
+data : {"layout" : 1008 ,"cat_id" : cat_id , "div_id" : div_id },
+success : function(data){
+ console.log(data);
+}
+
+})
+
+})*/
+
 
 
 

@@ -218,6 +218,35 @@
 				}
 		}	
 
+            if($_POST['layout'] === "1007"){ 
+			$cat_id = $_POST['cat_id'];
+			$div_id = $_POST['div_id'];
+			$query = "select * from rsm_test where cat_id ='".$cat_id."' and div_id='".$div_id."'  limit 30";
+			$res = query($query);
+			if(mysqli_num_rows($res) !== 0 ){
+				$rows = array();
+              while($r = mysqli_fetch_assoc($res)) {
+          $rows[] = $r;
+             }
+				//$row["data"]= $res->fetch_assoc();
+				//$row["Status"] = 1;
+				echo json_encode($rows);				
+			}else{
+				echo json_encode(array('Status' => 0));
+			}
+			exit();
+		}
+
+      /*if($_POST['layout'] === "1008"){ 
+			$cat_id = $_POST['section_id'];
+			$div_id = $_POST['div_id'];
+			$question = $_POST['question'];
+			$sql = "select * from rsm_test where cat_id ='".$cat_id."' and div_id='".$div_id."' and question='".$question."' and limit=30";
+			$res = query($query);	
+
+      } */
+
+		
 	}
 
 ?>

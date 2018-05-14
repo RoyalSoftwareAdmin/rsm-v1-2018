@@ -1,5 +1,4 @@
-  $(document).ready(function() {
-    
+              $(document).ready(function(){
            $cbs = $('input[name="checkbox"]').click(function() {
                 if($cbs.is(":checked")) {
 	                $("#sub button").removeAttr("disabled");	
@@ -7,8 +6,10 @@
 	            	$("#sub button").attr("disabled", "disabled");	
 	            }
             });
+
+
     	$(".btn").on("click", function(){
-			/* window.location.href = "UserDetails.php";  */
+		
 
          var user = JSON.parse(localStorage.getItem("session"));
               
@@ -20,12 +21,6 @@
                       {
           window.location.href = "taketest.php";
                 }
-
-
-
-
-
-
-		})
+})
 
     });

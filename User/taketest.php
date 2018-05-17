@@ -84,60 +84,12 @@ session_start();
    <div class="row">
    
    	<div class="col-md-2 ">
-      <div id="questionParent">
-     </div>
-  
-  
-    <!--<div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 2</button></a>
-    </div>
-    <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 3</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 4</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 5</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 6</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 7</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 8</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 9</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 10</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 11</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 12</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 13</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 14</button></a>
-    </div>
-      <div class="qtnleft">
-   		<a href=""><button type="button" class="btn btn-link">Question 15</button></a>
-    </div>-->
-   		
-   	
+      <div id="questionParentLeft"> </div>
    	</div>
    	<div class="col-md-8">
-   		<div class="midle">
-     
-   		</div>
-   		<div class="option">
+   		<div class="midle question"> </div>
+   		
+      <div class="option">
    			<label> Option 1 : </label>
    			<label class="op2"> Option 2 : </label>
           </div>
@@ -158,53 +110,8 @@ session_start();
    	</div>
    </div>
    	<div class="col-md-2">
-       <div id="questionParent1">
+       <div id="questionParentRight">
    		 </div>
-    <!--<div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 17</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 18</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 19</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 20</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 21</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 22</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 23</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 24</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 25</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 26</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 27</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 28</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href="" class="qtn"><button type="button" class="btn btn-link">Question 29</button></a>
-    </div>
-      <div class="qtnright">
-   		<a href=""><button type="button" class="btn btn-link">Question 30</button></a>
-    </div>
-   		
-   	</div>	
-   	</div>-->
    	</div>
 
 

@@ -29,7 +29,11 @@
 		color:#0DA8EA;
 		border: 1px solid #C3C3C3;
 	}
-
+.fa-times {
+	float: right;
+	color: #FF0000;
+	padding: 10px;
+}
 
 
 

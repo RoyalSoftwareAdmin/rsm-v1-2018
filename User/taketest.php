@@ -89,19 +89,25 @@ session_start();
    	<div class="col-md-8">
    		<div class="midle question"> </div>
    		
-      <div class="option">
-   			<label> Option 1 : </label>
-   			<label class="op2"> Option 2 : </label>
+   		          
+             <div class="option">
+   			<label class=" op1 option1"> Option 1 :<span></span> </label>
+   			
+   			<label class="op2 option2"> Option 2 : <span></span></label>
           </div>
-          <div class="option1">
-   			<label> Option 3 : </label>
-   			<label class="op4"> Option 4 : </label>
+          <div class="options">
+   			<label class="op3 option3"> Option 3 : <span></span></label>
+   			<label class="op4 option4"> Option 4 : <span></span></label>
           </div>
+     
+      
+  
+            
           <div class="rad">
           	<label class="r1"><input type="radio" name="optradio">Option 1</label>
-          	<label class="r2"><input type="radio" name="optradio">Option 1</label>
-          	<label class="r3"><input type="radio" name="optradio">Option 1</label>
-          	<label class="r4"><input type="radio" name="optradio">Option 1</label>
+          	<label class="r2"><input type="radio" name="optradio">Option 2</label>
+          	<label class="r3"><input type="radio" name="optradio">Option 3</label>
+          	<label class="r4"><input type="radio" name="optradio">Option 4</label>
           </div>
    	
    	<div class="buttons">

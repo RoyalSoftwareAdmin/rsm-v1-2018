@@ -111,8 +111,8 @@ session_start();
           </div>
    	
    	<div class="buttons">
-   		<button type="button" class="btn btn-info">Submit</button>
-   		<button type="button" class="btn btn-info">Review</button>
+   		<button type="button" class="btn btn-success">Submit</button>
+   		<button type="button" class="btn btn-primary">Review</button>
    	</div>
    </div>
    	<div class="col-md-2">

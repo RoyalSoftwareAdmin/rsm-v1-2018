@@ -3,6 +3,7 @@
 	width:100%;
 	margin: 10px;
 	border:2px solid #C3C3C3;
+	height: auto;
 }
 	.name{
        padding: 1%;
@@ -23,9 +24,12 @@
 		padding-top: 1%;
 		color:#0DA8EA;
 	}
+
+
 .btn1{
-		margin-left: 5%;
-		padding: 0.8em;
+		
+		padding: 0.7em;
+		margin: auto;
 		color:#0DA8EA;
 		border: 1px solid #C3C3C3;
 	}
@@ -34,35 +38,61 @@
 	color: #FF0000;
 	padding: 10px;
 }
+.questionBtn{
+	    margin: auto;
+		padding: 8px;
+		background: transparent;
+}
 
 
-
-.qtnleft{
+.qtnleft,.qtnright{
 	
 	border:1px solid #C3C3C3;
+	padding: 10px;
+	margin: auto;
+	border-radius: 10px;
 	color:#0DA8EA;
 
 	}
-	.qtnright{
-	
-	border:1px solid #C3C3C3;
-	color:#0DA8EA;
-
-	}
+.btn-success{
+	margin: 10px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.btn-success:hover{
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+.btn-primary{
+	margin: 10px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    
+}
+.btn-primary:hover{
+	color: #fff;
+    background-color: #333;
+    border-color: #398439;
+}
 
 .midle{
 	width:90%;
 	height:40%;
 	padding: 15%;
 	border:2px solid #C3C3C3;
-	margin-left: 5%;
+	margin-top: 8%;
+	margin-left: 6%;
 	color:#0DA8EA;
 }
 .option{
 	padding: 5%;
 	color:#0DA8EA;
+	font-size: 15px;
 }
-.options{
+.option1{
 	padding-left:5%;
 	color:#0DA8EA;
 }
@@ -71,7 +101,7 @@
 	color:#0DA8EA;
 }
 .op4{
-	margin-left: 48%;
+	margin-left: 46%;
 	color:#0DA8EA;
 }
 .rad{
@@ -80,14 +110,14 @@
 }
 .r1,.r2,.r3,.r4{
 	padding-left: 5%;
-	color:#0DA8EA;
+	/*color:#0DA8EA;*/
+	color: #0DA8EA;
 }
 .buttons{
 	margin-left: 30%;
 
 }
- p 
-{ 
+p{ 
  
 font-size: 24px; 
 margin:auto 0;
@@ -103,7 +133,6 @@ margin:auto 0;
  		opacity: 0;
  		 } 
 } 
-
 
 
 

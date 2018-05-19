@@ -1,6 +1,9 @@
 $(document).ready( function(){
-	var questionList = '';
-
+	var ResponseData = '';
+	
+    
+	
+	
 	$(".username").html(JSON.parse(localStorage.getItem("session")).fname);
 	var cat_id = localStorage.getItem("section");
 	var div_id = localStorage.getItem("div");
@@ -9,18 +12,24 @@ $(document).ready( function(){
 	method : "POST",
 	data : {"layout" : 1007 ,"cat_id" : cat_id , "div_id" : div_id},
 	success : function(data){
-		questionList = JSON.parse(data);
+		ResponseData = JSON.parse(data);
+		
 		var template = '' , template1 = '';
-		for (var i = 0 ; i< (questionList.length/2) ; i++){
-			template += '<div class="qtnleft"><button type="button" class="btn questionBtn"  data-val='+i+'>Question '+i+' </button><span><i class="fa fa-times"></i></span></div>'; 
+		for (var i = 0 ; i< (ResponseData.length/2) ; i++){
+			template += '<div class="qtnleft"><button type="button" class="btn questionBtn"  data-val='+i+'>Question '+i+' </button><span><i class="fa fa-times"></i></span></div>';
+			
 		}
-		for (var i = (questionList.length/2) ; i < questionList.length ; i++){
+		for (var i = (ResponseData.length/2) ; i < ResponseData.length ; i++){
 			template1 += '<div class="qtnright"><button type="button" class="btn questionBtn"  data-val='+i+'>Question '+i+'</button> <span><i class="fa fa-times"></i></span></div>'; 
 		}
+		
 
 		$('#questionParentLeft').html(template);
 		$('#questionParentRight').html(template1);
-	}
+
+		
+		}
+
 
 	})
 
@@ -46,7 +55,14 @@ $(document).ready( function(){
 
 	}, 1000); 
 
-	$(document).on("click", '.questionBtn', function(){
-		$(".question").html(questionList[$(this).data('val')].question);
+	$(document).on("click", '.questionBtn',  function(){
+		$(".question").html(ResponseData[$(this).data('val')].question);
+		$(".option1 span").html(ResponseData[$(this).data('val')].option1);
+		$(".option2 span").html(ResponseData[$(this).data('val')].option2);
+		$(".option3 span").html(ResponseData[$(this).data('val')].option3);
+		$(".option4 span").html(ResponseData[$(this).data('val')].option4);
+
+		
 	})
+	
 })

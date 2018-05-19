@@ -47,7 +47,7 @@
 <body class="cbp-spmenu-push">
 <div class="main-content">
            <div class="logo1">
-			<img src= "../images/logo.png"/>
+			<a href="index.php"><img src= "../images/logo.png"/></a>
 		</div>
 			<!-- main content start-->
 			<div id="page-wrapper">

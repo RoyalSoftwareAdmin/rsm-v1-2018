@@ -226,10 +226,8 @@
 			if(mysqli_num_rows($res) !== 0 ){
 				$rows = array();
               while($r = mysqli_fetch_assoc($res)) {
-          $rows[] = $r;
+          		$rows[] = $r;
              }
-				//$row["data"]= $res->fetch_assoc();
-				//$row["Status"] = 1;
 				echo json_encode($rows);				
 			}else{
 				echo json_encode(array('Status' => 0));
@@ -237,15 +235,41 @@
 			exit();
 		}
 
-      /*if($_POST['layout'] === "1008"){ 
-			$cat_id = $_POST['section_id'];
+      if($_POST['layout'] === "1008"){ 
+			$cat_id = $_POST['cat_id'];
 			$div_id = $_POST['div_id'];
 			$question = $_POST['question'];
-			$sql = "select * from rsm_test where cat_id ='".$cat_id."' and div_id='".$div_id."' and question='".$question."' and limit=30";
-			$res = query($query);	
+			$sql = "select c.cat_name , d.div_name from rsm_category c , rsm_div d where c.cat_id ='".$cat_id."' and d.div_id='".$div_id."'";
+			$res = query($sql);
+			if(mysqli_num_rows($res) !== 0 ){
+				$row = $res->fetch_assoc();
+				echo json_encode($row);				
+			}else{
+				echo json_encode(array('Status' => "Error"));
+			}
 
-      } */
+      }
 
+	if($_POST['layout'] === "1009"){ 
+			$userName = $_POST['userName'];
+			$test_id = $_POST['test_id'];
+			$cat_id = $_POST["cat_id"];
+			$div_id = $_POST["div_id"];
+			$correct_option = $_POST["correct_option"];
+			$entered_option = $_POST["entered_option"];
+			$correct_answer = $_POST["correct_answer"];
+			$entered_answer = $_POST["entered_answer"];
+			$sql = "CREATE TABLE IF NOT EXISTS `$userName` (test_id varchar(3), cat_id varchar(10), div_id varchar(10), correct_option varchar(3), entered_option varchar(3), correct_answer varchar(300), entered_answer varchar(500) )";
+			$res = query($sql);
+			$sql = "INSERT INTO `$userName` VALUES ('".$test_id."','". $cat_id."', '".$div_id."', '".$correct_option."', '".$entered_option."', '".$correct_answer."', '".$entered_answer."')";
+			echo $sql;
+			$res = query($sql);
+			if($sql){
+				echo json_encode(array('Status' => 1));				
+			}else{
+				echo json_encode(array('Status' => "Invalid UserName and Password"));
+			}
+      }  
 		
 	}
 

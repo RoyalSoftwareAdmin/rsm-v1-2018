@@ -1,8 +1,9 @@
 $(document).ready( function(){
 	var ResponseData = '';
-	$(".userName span").html(JSON.parse(localStorage.getItem("session")).fname);
+	var userName = JSON.parse(localStorage.getItem("session")).userName;
 	var cat_id = localStorage.getItem("section");
 	var div_id = localStorage.getItem("div");
+	$(".userName span").html(JSON.parse(localStorage.getItem("session")).fname);
 	
 	$.ajax({
 		url : "../apis/GenricData.php",
@@ -28,11 +29,11 @@ $(document).ready( function(){
 			
 			var template = '' , template1 = '';
 			for (var i = 0 ; i< (ResponseData.length/2) ; i++){
-				template += '<div class="qtnleft questionParent"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+i+'>Question '+(i+1)+' </button><span><i class="fa fa-times"></i></span></div>';
+				template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+' </button><span><i class="fa fa-times"></i></span></div>';
 				
 			}
 			for (var i = (ResponseData.length/2) ; i < ResponseData.length ; i++){
-				template1 += '<div class="qtnright questionParent"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+i+'>Question '+(i+1)+'</button> <span><i class="fa fa-times"></i></span></div>'; 
+				template1 += '<div class="qtnright questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+'</button> <span><i class="fa fa-times"></i></span></div>'; 
 			}
 			$('#questionParentLeft').html(template);
 			$('#questionParentRight').html(template1);	
@@ -70,14 +71,45 @@ $(document).ready( function(){
 	}, 1000); 
 
 	$(document).on("click", '.questionBtn',  function(){
-		$(".question").html(ResponseData[$(this).data('val')].question);
-		$(".option1 span").html(ResponseData[$(this).data('val')].option1);
-		$(".option2 span").html(ResponseData[$(this).data('val')].option2);
-		$(".option3 span").html(ResponseData[$(this).data('val')].option3);
-		$(".option4 span").html(ResponseData[$(this).data('val')].option4);
+		$(".question").html(ResponseData[($(this).data('val')-1)].question);
+		$(".option1 span").html(ResponseData[($(this).data('val')-1)].option1);
+		$(".option2 span").html(ResponseData[($(this).data('val')-1)].option2);
+		$(".option3 span").html(ResponseData[($(this).data('val')-1)].option3);
+		$(".option4 span").html(ResponseData[($(this).data('val')-1)].option4);
 		$(".questionParent").each(function(k, div){
 			$(div).removeClass('active');
 		})
-		$('.question'+($(this).data('val')+1)).parent().addClass('active');
+		$('.question'+$(this).data('val')).parent().addClass('active');
+	})
+
+	$(".submit").on("click", function(){
+		$(".active span i").removeClass("fa-times").addClass("fa-check").parent().find("button").attr("disabled", "disabled");
+
+		var test_id = $(".active button").data("val"),
+			correct_option = $(".active input[name='correct_option']").data("val"),
+			entered_option = $(".correctOption input:checked").val(),
+			correct_answer = $(".active input[name='correct_answer']").data("val"),
+			entered_answer = $(".enteredAnswer").val();
+			
+		$('.question'+(test_id+1)).click();
+
+
+		$.ajax({
+			url : "../apis/GenricData.php",
+		method : "POST",
+		data : {"layout" : 1009 ,"userName":userName, "cat_id" : cat_id , "div_id" : div_id , "test_id" : test_id , "correct_option" : correct_option, "entered_option" : entered_option, "correct_answer" : correct_answer, "entered_answer" : entered_answer},
+		success : function(data){
+				console.log(data);
+			},
+	
+		error : function(){
+			console.log("error");
+		}
+
+		})
+	})
+
+	$(".review").on("click", function(){
+		$(".active span i").removeClass("fa-times").addClass("fa-eye");
 	})
 })

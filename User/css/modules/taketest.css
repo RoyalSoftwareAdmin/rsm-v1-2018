@@ -54,6 +54,17 @@
 	color: #FF0000;
 	padding: 10px;
 }
+.fa-check {
+	float: right;
+	color: #4caf50;
+	padding: 10px;
+}
+
+.fa-eye {
+	float: right;
+	padding: 10px;
+}
+
 .questionBtn{
     margin: auto;
 	background: transparent;

@@ -21,26 +21,27 @@ session_start();
 	<!-- Custom CSS -->
 	<link href="../css/style.css" rel='stylesheet' type='text/css' />
 	
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- font-awesome icons CSS -->
 	<link href="../css/font-awesome.css" rel="stylesheet"> 
 	<!-- //font-awesome icons CSS-->
 
-
+     
 	 <!-- js-->
 	<script src="../js/jquery-1.11.1.min.js"></script>
-	<script src="../js/modernizr.custom.js"></script>	
-	<!--webfonts-->
+	<!--<script src="../js/modernizr.custom.js"></script>	
+	webfonts-->
 	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<!--//webfonts--> 
 
 	<!-- chart -->
-	<script src="../js/Chart.js"></script>
-	<!-- //chart -->
+	<!--<script src="../js/Chart.js"></script>
+	 //chart -->
 
 	<!-- Metis Menu -->
 	<link rel="stylesheet" href="../css/export.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/modules/taketest.css">
-	<script type="text/javascript" src="js/common/common.js"></script>
+	<!--<script type="text/javascript" src="js/common/common.js"></script>
 	<script src="../js/pie-chart.js" type="text/javascript"></script>
 	<script src="../js/owl.carousel.js"></script>
 	<script src="../js/amcharts.js"></script>
@@ -48,7 +49,7 @@ session_start();
 	<script src="../js/export.min.js"></script>
 	<script src="../js/light.js"></script>
 	<script src="../js/jquery.dataTables.js"></script>
-	<script src="../js/dataTables.bootstrap.js"></script>
+	<script src="../js/dataTables.bootstrap.js"></script>-->
 	<style>
 </style>
 </head>
@@ -61,7 +62,8 @@ session_start();
 	        		<label class="cat_id">Category : <span></span> </label>
 					<label class="division">Division : <span></span></label>
 					<label class="left">Time Left : <span id='time'></span></label>
-					<div class="saveExit"><button type="button" class="btn btn-primary">Save & Exit</button></div>
+           
+     <div class="saveExit"><button type="button" class="btn btn-primary">Save & Exit</button></div>
                 </div>
              </div>
 			</div>
@@ -73,7 +75,7 @@ session_start();
    	<div class="col-md-2 ">
       <div id="questionParentLeft"> </div>
    	</div>
-   	<div class="col-md-8">
+   	 <div class="col-md-8">
    		<div class="midle question"> </div>
    		<div class="choiceListParent">
 	   		 <div class="options col-md-12 choiceList">
@@ -92,36 +94,59 @@ session_start();
 	   				<label class="op2 option4">  Choice 4 : <span></span></label>
 	   			</div>
 	          </div>
-	    </div>
-	    <div class="enteredAnswerParent" style="display: none">
-		    <textarea class="enteredAnswer">Enter Answer Here</textarea>
-	    </div>
-     
+	  
+	   
             <div class="correctOption col-md-12">
             	<div class="col-md-3"><label>Choice 1</label><input type="radio" data-attr="option1" value="option1" name="correctOption"></div>
 	         	<div class="col-md-3"><label>Choice 2</label><input type="radio" data-attr="option2" value="option2" name="correctOption"></div>
 	         	<div class="col-md-3"><label>Choice 3</label><input type="radio" data-attr="option3" value="option3" name="correctOption"></div>
 	         	<div class="col-md-3"><label>Choice 4</label><input type="radio" data-attr="option4" value="option4" name="correctOption"></div>
            </div>
-   	
+        </div>
+   	 <div class="col-md-12 enteredAnswerParent" style="display: none">
+   	 	     <div class="textareaDiv">
+   	 	     <label>Answer Keywords</label>
+		    <textarea class="enteredAnswer"></textarea>
+	 </div>
+	</div>
+     
    	<div class="actionButtons col-md-12">
-   		<button type="button" class="btn btn-success submit">Submit</button>
-   		<button type="button" class="btn btn-primary review">Review</button>
-   	</div>
+   		<button type="button" class="btn btn-success submit" disabled="disabled">Submit</button>
+<button type="button" class="btn btn-primary review">Review</button>
+   	
    </div>
+   </div>
+
+
    	<div class="col-md-2">
        <div id="questionParentRight">
    		 </div>
    	</div>
+</div>
 
 
 
-
-
-	</div>
+<div class="modal fade in" id="successModal_id" tabindex="-1" role="dialog" aria-labelledby="successModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="gridSystemModalLabel">thank you for attending test</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row"> 
+							successfully completed your test 
+						</div> 
+					<div class="modal-footer">
+						<a href="index.php"><button type="button">ok</button></a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+      </div>
 	
 </body>
-
 
 
 

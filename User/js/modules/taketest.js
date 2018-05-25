@@ -65,17 +65,34 @@ $(document).ready( function(){
 		} 
 		document.getElementById("time").innerHTML = minutes + "m " + seconds + "s "; 
 		if (left < 0) { 
-			 clearInterval(x); document.getElementById("time").innerHTML = "You are Done!!"; 
-		} 
+			
+			clearInterval(x); 
+			document.getElementById("time").innerHTML = "You are Done!!";
+			$('#successModal_id').show();
+			
+			
+			} 
+			
+			
 
-	}, 1000); 
+			
 
-	$(document).on("click", '.questionBtn',  function(){
+			
+
+    }, 1000); 
+
+   $(document).on("click", '.questionBtn',  function(){
 		$(".question").html(ResponseData[($(this).data('val')-1)].question);
-		$(".option1 span").html(ResponseData[($(this).data('val')-1)].option1);
-		$(".option2 span").html(ResponseData[($(this).data('val')-1)].option2);
-		$(".option3 span").html(ResponseData[($(this).data('val')-1)].option3);
-		$(".option4 span").html(ResponseData[($(this).data('val')-1)].option4);
+		if (ResponseData[($(this).data('val')-1)].correct_answer.length  == 0) {
+			$(".enteredAnswerParent").hide();
+			$(".option1 span").html(ResponseData[($(this).data('val')-1)].option1);
+			$(".option2 span").html(ResponseData[($(this).data('val')-1)].option2);
+			$(".option3 span").html(ResponseData[($(this).data('val')-1)].option3);
+			$(".option4 span").html(ResponseData[($(this).data('val')-1)].option4);
+		} else{
+			$(".choiceListParent").hide();
+			$(".enteredAnswerParent").css("display","block");
+		}
 		$(".questionParent").each(function(k, div){
 			$(div).removeClass('active');
 		})
@@ -83,8 +100,8 @@ $(document).ready( function(){
 	})
 
 	$(".submit").on("click", function(){
-		$(".active span i").removeClass("fa-times").addClass("fa-check").parent().find("button").attr("disabled", "disabled");
-
+		$(".active span i").removeClass("fa-times").addClass("fa-check").closest('.questionParent').find("button").prop("disabled", true);
+       
 		var test_id = $(".active button").data("val"),
 			correct_option = $(".active input[name='correct_option']").data("val"),
 			entered_option = $(".correctOption input:checked").val(),
@@ -112,4 +129,17 @@ $(document).ready( function(){
 	$(".review").on("click", function(){
 		$(".active span i").removeClass("fa-times").addClass("fa-eye");
 	})
+
+
+	   var $radio = $("input:radio");
+       $radio.change(function () {
+         if ($radio.filter(':checked').length > 0) {
+        $(".submit").removeAttr("disabled");
+          } 
+          else 
+          {
+        $(".submit").attr("disabled", "disabled");
+       }
+      });
+
 })

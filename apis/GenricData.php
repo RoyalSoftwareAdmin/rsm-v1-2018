@@ -238,7 +238,7 @@
       if($_POST['layout'] === "1008"){ 
 			$cat_id = $_POST['cat_id'];
 			$div_id = $_POST['div_id'];
-			$question = $_POST['question'];
+			//$question = $_POST['question'];
 			$sql = "select c.cat_name , d.div_name from rsm_category c , rsm_div d where c.cat_id ='".$cat_id."' and d.div_id='".$div_id."'";
 			$res = query($sql);
 			if(mysqli_num_rows($res) !== 0 ){

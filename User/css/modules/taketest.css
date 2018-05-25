@@ -127,3 +127,21 @@ margin:auto 0;
  		opacity: 0;
  		 } 
 } 
+#successModal_id{
+	display:none; 
+}
+.enteredAnswerParent{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.textareaDiv textarea{
+	width: 65%;
+	height: 160px;
+	border: 2px solid #C3C3C3;
+    border-radius: 10px;
+}
+.textareaDiv label {
+	display: block;
+    float: left;
+    margin: 70px 25px 0px 0px;
+}

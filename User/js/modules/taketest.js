@@ -73,11 +73,6 @@ $(document).ready( function(){
 			
 			} 
 			
-			
-
-			
-
-			
 
     }, 1000); 
 
@@ -101,6 +96,7 @@ $(document).ready( function(){
 
 	$(".submit").on("click", function(){
 		$(".active span i").removeClass("fa-times").addClass("fa-check").closest('.questionParent').find("button").prop("disabled", true);
+			$(".active").css("background-color","green");
        
 		var test_id = $(".active button").data("val"),
 			correct_option = $(".active input[name='correct_option']").data("val"),
@@ -127,9 +123,12 @@ $(document).ready( function(){
 	})
 
 	$(".review").on("click", function(){
-		$(".active span i").removeClass("fa-times").addClass("fa-eye");
+		$(".active").css("background-color","red");
 	})
 
+	/*$(".submit")on("click", function(){
+		$(".active").css("color","green");
+	})*/
 
 	   var $radio = $("input:radio");
        $radio.change(function () {

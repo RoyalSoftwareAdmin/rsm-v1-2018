@@ -72,37 +72,41 @@ session_start();
     <div class="container">
    <div class="row">
    
-   	<div class="col-md-2 ">
+   	<div class="col-md-4 ">
       <div id="questionParentLeft"> </div>
+      
    	</div>
-   	 <div class="col-md-8">
+   	
+   	 <div class="col-md-7">
    		<div class="midle question"> </div>
+
+
    		<div class="choiceListParent">
+   			
 	   		 <div class="options col-md-12 choiceList">
+	   		 	
 	   		 	<div class="col-md-6">
-	   				<label class=" op1 option1"> Choice 1 : <span></span> </label>
+	   		 	
+             	<div class="col-md-2"><input type="radio" data-attr="option1" value="option1" name="correctOption" class="radio"></div><label class=" op1 option1"> <span></span> </label>
 	   			</div>
 	   			<div class="col-md-6 ">
-	   				<label class="op2 option2">  Choice 2 : <span></span></label>
+	   			<div class="col-md-2"><input type="radio" data-attr="option2" value="option2" name="correctOption" class="radio"></div><label class="op2 option2"> <span></span></label>
 	   			</div>
 	          </div>
-	          <div class="options col-md-12 choiceList">
+       
+	        <div class="options col-md-12 choiceList">
 	   		 	<div class="col-md-6">
-	   				<label class=" op1 option3"> Choice 3 : <span></span> </label>
+	   			<div class="col-md-2"><input type="radio" data-attr="option3" value="option3" name="correctOption" class="radio"></div><label class=" op1 option3">  <span></span> </label>
 	   			</div>
 	   			<div class="col-md-6">
-	   				<label class="op2 option4">  Choice 4 : <span></span></label>
+	   			<div class="col-md-2"><input type="radio" data-attr="option4" value="option4" name="correctOption" class="radio"></div><label class="op2 option4">   <span></span></label>
 	   			</div>
+	   		</div>
 	          </div>
 	  
 	   
-            <div class="correctOption col-md-12">
-            	<div class="col-md-3"><label>Choice 1</label><input type="radio" data-attr="option1" value="option1" name="correctOption"></div>
-	         	<div class="col-md-3"><label>Choice 2</label><input type="radio" data-attr="option2" value="option2" name="correctOption"></div>
-	         	<div class="col-md-3"><label>Choice 3</label><input type="radio" data-attr="option3" value="option3" name="correctOption"></div>
-	         	<div class="col-md-3"><label>Choice 4</label><input type="radio" data-attr="option4" value="option4" name="correctOption"></div>
-           </div>
-        </div>
+           
+      
    	 <div class="col-md-12 enteredAnswerParent" style="display: none">
    	 	     <div class="textareaDiv">
    	 	     <label>Answer Keywords</label>
@@ -118,10 +122,10 @@ session_start();
    </div>
 
 
-   	<div class="col-md-2">
+   	<!--<div class="col-md-2">
        <div id="questionParentRight">
    		 </div>
-   	</div>
+   	</div>-->
 </div>
 
 

@@ -64,31 +64,25 @@
 	float: right;
 	padding: 10px;
 }
-
 .questionBtn{
     margin: auto;
 	background: transparent;
 	padding: 10px;
 }
 .active{
-	background: #0DA8EA;
+	background: #c3c3c3;
     color: #FFFFFF !important;
 }
 
 .qtnleft{
 	border:1px solid #C3C3C3;
-	margin: 10px 0px;
+	margin: 10px 5px;
 	border-radius: 10px;
-	color:#0DA8EA;
-	width: 52px;
+	/*color:#0DA8EA;*/
+	color: #fff;
+	width: 45px;
 	display: inline-flex;
-
-
-	}
-.qtnleft .questionParentLeft{
-	  border: 1px solid #0DA8EA;
-	  
-	  padding: 5px;
+	background-color: #ff3232;
 }
 
 .question{
@@ -101,7 +95,6 @@
     color: #0DA8EA;
     vertical-align: middle;
     display: table-cell;
-
 }
 .options{
 	color: #0DA8EA;
@@ -120,9 +113,9 @@
 	color:#0DA8EA;
 }
 
-#demo{ 
+#time{ 
  
-font-size: 24px; 
+font-size: 18px; 
 margin:auto 0;
 
 }
@@ -166,24 +159,60 @@ margin:auto 0;
 }
 
 .choiceListParent{
-
-border: 2px solid #C3C3C3;
+   
+	border: 2px solid #C3C3C3;
     border-radius: 10px;
 width: 100%;
-	height: 160px;
+	min-height: 250px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 
+
+}
+.QuestionButtonsParent{
+	 border: 2px solid #C3C3C3;
+	 border-radius: 10px;
+	 height: 550px;
 }
 #questionParentLeft{
-	
     text-align: center;
-    border: 2px solid #C3C3C3;
     border-radius: 10px;
     margin: 5% auto 0% auto;
     color: #0DA8EA;
-    padding: 10px;
+    padding: 15px;
     display: table-cell;
-    height: 500px;
+    height: 420px;
 
 }
+.lab1{
+	  padding: 0px 15px;
+	  margin: auto;
+	  font-size: 18px;
+	  font-weight: 600;
+}
+.la1{
+	 color: green;
+}
+.la2{
+	 color: #ff0000;
+}
+.la3{
+	 color: #0DA8EA;
+}
+.review{
+	    color: #fff;
+}
+.review:hover{
+	   color:  #0DA8EA;
+}
+.save{
+	color: #fff;
+}
+.save:hover{
+	color: #0DA8EA;
+}
+
+
+
+
+

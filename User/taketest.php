@@ -1,10 +1,7 @@
 <?php 
 session_start();
-
  /* if( !isset($_SESSION["user"]) ){
-
         exit(header("Location: userDetails.php"));
-
     } 
     echo "taketest";  */  
 ?>
@@ -20,8 +17,6 @@ session_start();
 
 	<!-- Custom CSS -->
 	<link href="../css/style.css" rel='stylesheet' type='text/css' />
-	
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- font-awesome icons CSS -->
 	<link href="../css/font-awesome.css" rel="stylesheet"> 
 	<!-- //font-awesome icons CSS-->
@@ -31,7 +26,7 @@ session_start();
 	<script src="../js/jquery-1.11.1.min.js"></script>
 	<!--<script src="../js/modernizr.custom.js"></script>	
 	webfonts-->
-	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<!--//webfonts--> 
 
 	<!-- chart -->
@@ -41,17 +36,7 @@ session_start();
 	<!-- Metis Menu -->
 	<link rel="stylesheet" href="../css/export.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/modules/taketest.css">
-	<!--<script type="text/javascript" src="js/common/common.js"></script>
-	<script src="../js/pie-chart.js" type="text/javascript"></script>
-	<script src="../js/owl.carousel.js"></script>
-	<script src="../js/amcharts.js"></script>
-	<script src="../js/serial.js"></script>
-	<script src="../js/export.min.js"></script>
-	<script src="../js/light.js"></script>
-	<script src="../js/jquery.dataTables.js"></script>
-	<script src="../js/dataTables.bootstrap.js"></script>-->
-	<style>
-</style>
+	</style>
 </head>
 <body>
 	<div class="container" id="takeTest">
@@ -73,7 +58,16 @@ session_start();
    <div class="row">
    
    	<div class="col-md-4 ">
-      <div id="questionParentLeft"> </div>
+      <!--<div id="questionParentLeft"> </div>-->
+
+      <div class="QuestionButtonsParent">
+	  <div id="questionParentLeft">
+	  <div class="qtnleft questionParent"></div>
+	  </div> 
+	  <div class="lab1 la1">Total Answered :</div>
+	  <div class="lab1 la2">Total UnAnswered :</div>
+	  <div class="lab1 la3">Total Review Pending :</div>
+	  </div>
       
    	</div>
    	
@@ -85,28 +79,28 @@ session_start();
    			
 	   		 <div class="options col-md-12 choiceList">
 	   		 	
-	   		 	<div class="col-md-6">
+	   		 	<div class="col-md-6 ">
 	   		 	
-             	<div class="col-md-2"><input type="radio" data-attr="option1" value="option1" name="correctOption" class="radio"></div><label class=" op1 option1"> <span></span> </label>
+             	<div class="col-md-2"><input type="radio" data-attr="option1" value="option1" name="correctOption" class="radio"></div>
+
+             	<label class=" col-md-10 op1 option1"> <span></span> </label>
 	   			</div>
 	   			<div class="col-md-6 ">
-	   			<div class="col-md-2"><input type="radio" data-attr="option2" value="option2" name="correctOption" class="radio"></div><label class="op2 option2"> <span></span></label>
+	   			<div class="col-md-2"><input type="radio" data-attr="option2" value="option2" name="correctOption" class="radio"></div><label class=" col-md-10 op2 option2"> <span></span></label>
 	   			</div>
 	          </div>
        
 	        <div class="options col-md-12 choiceList">
 	   		 	<div class="col-md-6">
-	   			<div class="col-md-2"><input type="radio" data-attr="option3" value="option3" name="correctOption" class="radio"></div><label class=" op1 option3">  <span></span> </label>
+	   			<div class="col-md-2"><input type="radio" data-attr="option3" value="option3" name="correctOption" class="radio"></div><label class="col-md-10 op1 option3">  <span></span> </label>
 	   			</div>
 	   			<div class="col-md-6">
-	   			<div class="col-md-2"><input type="radio" data-attr="option4" value="option4" name="correctOption" class="radio"></div><label class="op2 option4">   <span></span></label>
+	   			<div class="col-md-2"><input type="radio" data-attr="option4" value="option4" name="correctOption" class="radio"></div><label class=" col-md-10 op2 option4">   <span></span></label>
 	   			</div>
 	   		</div>
 	          </div>
 	  
-	   
-           
-      
+  
    	 <div class="col-md-12 enteredAnswerParent" style="display: none">
    	 	     <div class="textareaDiv">
    	 	     <label>Answer Keywords</label>
@@ -121,11 +115,6 @@ session_start();
    </div>
    </div>
 
-
-   	<!--<div class="col-md-2">
-       <div id="questionParentRight">
-   		 </div>
-   	</div>-->
 </div>
 
 
@@ -134,7 +123,7 @@ session_start();
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 						<h4 class="modal-title" id="gridSystemModalLabel">thank you for attending test</h4>
 					</div>
 					<div class="modal-body">
@@ -157,5 +146,3 @@ session_start();
 
 <script type="text/javascript" src="js/common/lists.js"></script>
 <script src ="js/modules/taketest.js"> </script>
-
-   

@@ -29,14 +29,11 @@ $(document).ready( function(){
 			
 			var template = '' , template1 = '';
 			for (var i = 0 ; i< (ResponseData.length) ;  i++){
-				template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Q '+(i+1)+' </button></div>';
-				
+				template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-id='+i+' data-val='+ResponseData[i].test_id+'>Q '+(i+1)+' </button></div>';
 			}
-			for (var i = (ResponseData.length/2) ; i < ResponseData.length ; i++){
-				template1 += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Q '+(i+1)+'</button></div>'; 
-			}
+			//$('#questionParentLeft').html(template);
+			//$('.question1').click();
 			$('#questionParentLeft').html(template);
-			$('#questionParentRight').html(template1);	
 			$(".question").html(ResponseData[0].question);
 			$(".option1 span").html(ResponseData[0].option1);
 			$(".option2 span").html(ResponseData[0].option2);
@@ -54,7 +51,7 @@ $(document).ready( function(){
 
 		now = now.getTime(); 
 		var left = countDownDate - now;
-		 var minutes = Math.floor((left % (1000 *60 *60)) / (1000 * 60)); 
+		 var minutes = Math.floor((left % (1000 * 60 * 60)) / (1000 * 60)); 
 		 var seconds = Math.floor((left % (1000 * 60)) / 1000);
 		  if ( minutes == 3 ) 
 		  	{ 
@@ -77,31 +74,40 @@ $(document).ready( function(){
     }, 1000); 
 
    $(document).on("click", '.questionBtn',  function(){
-		$(".question").html(ResponseData[($(this).data('val')-1)].question);
-		if (ResponseData[($(this).data('val')-1)].correct_answer.length  == 0) {
+		$(".question").html(ResponseData[($(this).data('id'))].question);
+		if (ResponseData[($(this).data('id'))].correct_answer.length  == 0) {
 			$(".enteredAnswerParent").hide();
-			$(".option1 span").html(ResponseData[($(this).data('val')-1)].option1);
-			$(".option2 span").html(ResponseData[($(this).data('val')-1)].option2);
-			$(".option3 span").html(ResponseData[($(this).data('val')-1)].option3);
-			$(".option4 span").html(ResponseData[($(this).data('val')-1)].option4);
+			$(".option1 span").html(ResponseData[($(this).data('id'))].option1);
+			$(".option2 span").html(ResponseData[($(this).data('id'))].option2);
+			$(".option3 span").html(ResponseData[($(this).data('id'))].option3);
+			$(".option4 span").html(ResponseData[($(this).data('id'))].option4);
+			$(".choiceListParent").show();
 		} else{
+
 			$(".choiceListParent").hide();
 			$(".enteredAnswerParent").css("display","block");
 		}
+
+		
 		$(".questionParent").each(function(k, div){
 			$(div).removeClass('active');
 		})
-		$('.question'+$(this).data('val')).parent().addClass('active');
+		$('.question'+$(this).data('id')).parent().addClass('active');
+
+$(".choiceListParent input[type='radio']").prop('checked',false);
+   //$('.choiceListParent').prop('checked', false);
+   $(".submit").attr("disabled", "disabled") 
 	})
+  
 
 	$(".submit").on("click", function(){
 		$(".active span i").removeClass("fa-times").addClass("fa-check").closest('.questionParent').find("button").prop("disabled", true);
 			$(".active").css("background-color","green");
        
 		var test_id = $(".active button").data("val"),
-			correct_option = $(".active input[name='correct_option']").data("val"),
+			correct_option = $(".active input[name='correct_option']").data("id"),
 			entered_option = $(".correctOption input:checked").val(),
-			correct_answer = $(".active input[name='correct_answer']").data("val"),
+			correct_answer = $(".active input[name='correct_answer']").data("id"),
 			entered_answer = $(".enteredAnswer").val();
 			
 		$('.question'+(test_id+1)).click();
@@ -123,7 +129,7 @@ $(document).ready( function(){
 	})
 
 	$(".review").on("click", function(){
-		$(".active").css("background-color","red");
+		$(".active").css("background-color","#0DA8EA");
 	})
 
 	/*$(".submit")on("click", function(){

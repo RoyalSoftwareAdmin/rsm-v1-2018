@@ -1,5 +1,5 @@
+var ResponseData = '';
 $(document).ready( function(){
-	var ResponseData = '';
 	var userName = JSON.parse(localStorage.getItem("session")).userName;
 	var cat_id = localStorage.getItem("section");
 	var div_id = localStorage.getItem("div");
@@ -29,17 +29,13 @@ $(document).ready( function(){
 			
 			var template = '' , template1 = '';
 			for (var i = 0 ; i< (ResponseData.length) ;  i++){
-				template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-id='+i+' data-val='+ResponseData[i].test_id+'>Q '+(i+1)+' </button></div>';
+				template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+i+'"  data-id='+i+' data-val='+ResponseData[i].test_id+'>Q '+(i+1)+' </button></div>';
 			}
 			//$('#questionParentLeft').html(template);
-			//$('.question1').click();
 			$('#questionParentLeft').html(template);
+			$('.question0').click();
 			$(".question").html(ResponseData[0].question);
-			$(".option1 span").html(ResponseData[0].option1);
-			$(".option2 span").html(ResponseData[0].option2);
-			$(".option3 span").html(ResponseData[0].option3);
-			$(".option4 span").html(ResponseData[0].option4);
-			$('.question1').parent().addClass('active');
+			//$('.question0').parent().addClass('active');
 		}
 
 
@@ -82,37 +78,33 @@ $(document).ready( function(){
 			$(".option3 span").html(ResponseData[($(this).data('id'))].option3);
 			$(".option4 span").html(ResponseData[($(this).data('id'))].option4);
 			$(".choiceListParent").show();
+            $(".submit").attr("disabled","disabled")
 		} else{
 
+$(".submit").removeAttr("disabled")
 			$(".choiceListParent").hide();
 			$(".enteredAnswerParent").css("display","block");
+
 		}
 
-		
 		$(".questionParent").each(function(k, div){
 			$(div).removeClass('active');
 		})
 		$('.question'+$(this).data('id')).parent().addClass('active');
 
-$(".choiceListParent input[type='radio']").prop('checked',false);
-   //$('.choiceListParent').prop('checked', false);
-   $(".submit").attr("disabled", "disabled") 
+		$(".choiceListParent input[type='radio']").prop('checked',false);
+	    
 	})
   
 
 	$(".submit").on("click", function(){
-		$(".active span i").removeClass("fa-times").addClass("fa-check").closest('.questionParent').find("button").prop("disabled", true);
-			$(".active").css("background-color","green");
-       
 		var test_id = $(".active button").data("val"),
-			correct_option = $(".active input[name='correct_option']").data("id"),
+			click_id = $(".active button").data("id"),
+			correct_option = $(".active input[name='correct_option']").data("val"),
 			entered_option = $(".correctOption input:checked").val(),
-			correct_answer = $(".active input[name='correct_answer']").data("id"),
+			correct_answer = $(".active input[name='correct_answer']").data("val"),
 			entered_answer = $(".enteredAnswer").val();
-			
-		$('.question'+(test_id+1)).click();
-
-
+			entered_option = (entered_option == undefined) ? 'Null' : entered_option;
 		$.ajax({
 			url : "../apis/GenricData.php",
 		method : "POST",
@@ -126,10 +118,14 @@ $(".choiceListParent input[type='radio']").prop('checked',false);
 		}
 
 		})
+		$(".question"+click_id).prop("disabled", "true").parent().addClass("submitted");
+		$('.question'+(click_id+1)).click();
+		
 	})
 
 	$(".review").on("click", function(){
-		$(".active").css("background-color","#0DA8EA");
+		$(".active").addClass("review");
+		$(".question"+($(".active button").data("id") +1)).click();
 	})
 
 	/*$(".submit")on("click", function(){

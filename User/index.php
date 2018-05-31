@@ -138,6 +138,29 @@
     <!-- for index page weekly sales java script -->
     <script src="../js/SimpleChart.js"></script>
     <script>
+        var userName = JSON.parse(localStorage.getItem("session")).userName;
+        $.ajax({
+            url : "../apis/GenricData.php",
+            method : "POST",
+            data : {"layout" : 1010, "userName":userName},
+            success : function(data){
+                    ResponseData = JSON.parse(data);
+                    
+                    var template = '' , template1 = '';
+                    for (var i = 0 ; i< (ResponseData.length/2) ; i++){
+                        template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+' </button><span><i class="fa fa-times"></i></span></div>';
+                        
+                    }
+                    for (var i = (ResponseData.length/2) ; i < ResponseData.length ; i++){
+                        template1 += '<div class="qtnright questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+'</button> <span><i class="fa fa-times"></i></span></div>'; 
+                    }
+                    $('#questionParentLeft').html(template);
+                    $('#questionParentRight').html(template1);  
+                    $(".question1").click();
+                }
+
+
+            })
         var graphdata1 = {
             linecolor: "#CCA300",
             title: "Monday",

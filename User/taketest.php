@@ -39,7 +39,7 @@ session_start();
 	</style>
 </head>
 <body>
-	<div class="container" id="takeTest">
+	<div class="container col-md-12" id="takeTest">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="header">
@@ -47,72 +47,64 @@ session_start();
 	        		<label class="cat_id">Category : <span></span> </label>
 					<label class="division">Division : <span></span></label>
 					<label class="left">Time Left : <span id='time'></span></label>
-           
-     <div class="saveExit"><button type="button" class="btn btn-primary">Save & Exit</button></div>
+    				 <div class="saveExit"><button type="button" class="btn btn-primary">Save & Exit</button></div>
                 </div>
              </div>
 			</div>
 		</div>
 	
-    <div class="container">
-   <div class="row">
-   
-   	<div class="col-md-4 ">
-      <!--<div id="questionParentLeft"> </div>-->
+    <div class="container col-md-12">
+		<div class="row">
+		   
+		   	<div class="col-md-4">
+		   
 
-      <div class="QuestionButtonsParent">
-	  <div id="questionParentLeft">
-	  <div class="qtnleft questionParent"></div>
-	  </div> 
-	  <div class="lab1 la1">Total Answered :</div>
-	  <div class="lab1 la2">Total UnAnswered :</div>
-	  <div class="lab1 la3">Total Review Pending :</div>
-	  </div>
-      
-   	</div>
-   	
-   	 <div class="col-md-7">
-   		<div class="midle question"> </div>
-
-
-   		<div class="choiceListParent">
-   			
-	   		 <div class="options col-md-12 choiceList">
-	   		 	
-	   		 	<div class="col-md-6 ">
-	   		 	
-             	<div class="col-md-2"><input type="radio" data-attr="option1" value="option1" name="correctOption" class="radio"></div>
-
-             	<label class=" col-md-10 op1 option1"> <span></span> </label>
-	   			</div>
-	   			<div class="col-md-6 ">
-	   			<div class="col-md-2"><input type="radio" data-attr="option2" value="option2" name="correctOption" class="radio"></div><label class=" col-md-10 op2 option2"> <span></span></label>
-	   			</div>
-	          </div>
-       
-	        <div class="options col-md-12 choiceList">
-	   		 	<div class="col-md-6">
-	   			<div class="col-md-2"><input type="radio" data-attr="option3" value="option3" name="correctOption" class="radio"></div><label class="col-md-10 op1 option3">  <span></span> </label>
-	   			</div>
-	   			<div class="col-md-6">
-	   			<div class="col-md-2"><input type="radio" data-attr="option4" value="option4" name="correctOption" class="radio"></div><label class=" col-md-10 op2 option4">   <span></span></label>
-	   			</div>
-	   		</div>
-	          </div>
-	  
-  
-   	 <div class="col-md-12 enteredAnswerParent" style="display: none">
-   	 	     <div class="textareaDiv">
-   	 	     <label>Answer Keywords</label>
-		    <textarea class="enteredAnswer"></textarea>
-	 </div>
-	</div>
-     
-   	<div class="actionButtons col-md-12">
-   		<button type="button" class="btn btn-success submit" disabled="disabled">Submit</button>
-<button type="button" class="btn btn-primary review">Review</button>
-   	
-   </div>
+		      <div class="QuestionButtonsParent">
+			  <div id="questionParentLeft">
+			  <div class="qtnleft questionParent"></div>
+			  </div> 
+			  <div class="lab1 la1">Total Answered :</div>
+			  <div class="lab1 la2">Total UnAnswered :</div>
+			  <div class="lab1 la3">Total Review Pending :</div>
+			  </div>
+		      
+		   	</div>
+		   	
+		   	 <div class="col-md-8">
+		   		<div class="question col-md-12"> </div>
+		   		<div class="choiceListParent col-md-12">
+		   			<div class="options choiceList">
+		   		 	    <div class="col-md-6">
+				        	<input type="radio" data-attr="option1" value="option1" name="correctOption" class="radio"> <label class=" op1 option1"> <span></span> </label>
+				        </div>
+				        <div class="col-md-6 ">
+				   			<input type="radio" data-attr="option2" value="option2" name="correctOption" class="radio"><label class="op2 option2"> <span></span></label>
+				   			</div>
+				    </div>
+			   			
+		       
+			        <div class="options choiceList">
+			   		 	<div class="col-md-6">
+			   				<input type="radio" data-attr="option3" value="option3" name="correctOption" class="radio"><label class="op1 option3">  <span></span> </label>
+			   			</div>
+			   			<div class="col-md-6">
+			   				<input type="radio" data-attr="option4" value="option4" name="correctOption" class="radio"><label class="op2 option4">   <span></span></label>
+			   			</div>
+			   		</div>
+			    </div>
+			  
+			   	 <div class="col-md-12 enteredAnswerParent" style="display: none">
+			   	 	<div class="textareaDiv">
+			   	 	  
+					    <textarea class="enteredAnswer"></textarea>
+					</div>
+				</div>
+		     
+		   	<div class="actionButtons col-md-12">
+		   		<button type="button" class="btn btn-success submit" disabled="disabled">Submit</button>
+				<button type="button" class="btn btn-primary review">Review</button>
+				   	
+		  	</div>
    </div>
 
 </div>

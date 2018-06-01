@@ -43,7 +43,7 @@ $(document).ready( function(){
 
 	var countDownDate = new Date().getTime(); 
  	var x = setInterval(function(){ 
-		var now = new Date(); now.setMinutes(now.getMinutes() - 30); 
+		var now = new Date(); now.setMinutes(now.getMinutes() - 1); 
 
 		now = now.getTime(); 
 		var left = countDownDate - now;
@@ -142,6 +142,22 @@ $(".submit").removeAttr("disabled")
         $(".submit").attr("disabled", "disabled");
        }
       });
+       $(".save").on("click",function(){
+	  $("#successModal_id").show();
+
+	   $(".modal-title").css( "display","none");
+	  $(".modal-body .row").html( "Are you sure you want to exit");
+	  $(".btn-danger").css( "visibility", "visible");
+})
+
+       $(".").on("click",function(){
+       	 $("#successModal_id").show();
+         $(".modal-body .row").html( "Successufully completed 30 questions");
+       })
 
 
+	 
+	 
+
+	
 })

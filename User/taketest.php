@@ -11,6 +11,11 @@ session_start();
 	<title>taketest</title>
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
+
+	
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/Bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="../css/dataTables.bootstrap.css" rel='stylesheet' type='text/css' />
@@ -47,7 +52,10 @@ session_start();
 	        		<label class="cat_id">Category : <span></span> </label>
 					<label class="division">Division : <span></span></label>
 					<label class="left">Time Left : <span id='time'></span></label>
-    				 <div class="saveExit"><button type="button" class="btn btn-primary">Save & Exit</button></div>
+    				 
+    				 <!--<div class="saveExit"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal_id" data-whatever="@mdo" >Save & Exit</button></div>-->
+    				  <div class="saveExit"><button type="button" class="btn btn-primary save" >Save & Exit</button></div>
+    				
                 </div>
              </div>
 			</div>
@@ -111,26 +119,30 @@ session_start();
 
 
 
-<div class="modal fade in" id="successModal_id" tabindex="-1" role="dialog" aria-labelledby="successModal">
+<div class="modal fade in" id="successModal_id" tabindex="-1" role="dialog" aria-labelledby="successModal_idLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-						<h4 class="modal-title" id="gridSystemModalLabel">thank you for attending test</h4>
+					
+						<h4 class="modal-title">thank you for attending test</h4>
 					</div>
 					<div class="modal-body">
-						<div class="row"> 
-							successfully completed your test 
-						</div> 
+						<div class="row">
+							
+			      <p> successfully completed your test </p>
+						</div>
 					<div class="modal-footer">
-						<a href="index.php"><button type="button">ok</button></a>
-						
+						<a href="index.php"><button type="button" class="btn btn-success">OK</button></a>
+						 
+						<button type="button" class="btn btn-danger" data-dismiss="modal fade in">Close</button>
+                             </div>
 					</div>
-				</div>
+				
 			</div>
 		</div>
       </div>
-	
+
+     
 </body>
 
 

@@ -127,10 +127,13 @@ margin:auto 0;
 	margin-bottom: 20px;
 }
 .textareaDiv textarea{
-	width: 65%;
-	height: 160px;
-	border: 2px solid #C3C3C3;
+	
+    border: 2px solid #C3C3C3;
     border-radius: 10px;
+	width: 100%;
+	min-height: 210px;
+	
+	margin-bottom: 20px;
 }
 .textareaDiv label {
 	display: block;
@@ -146,13 +149,14 @@ margin:auto 0;
   height:25px;
   border-radius:25%;
   float: left;
+
 }
 
 .choiceListParent{
 	border: 2px solid #C3C3C3;
     border-radius: 10px;
 	width: 100%;
-	min-height: 250px;
+	min-height: 200px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -200,3 +204,15 @@ margin:auto 0;
 .save:hover{
 	color: #0DA8EA;
 }
+ .btn-danger{
+	visibility: hidden;
+}
+  .modal-header{
+  	border:none;
+  }
+   .modal-footer{
+  	border:none;
+  }
+  .modal{
+  	background-color: #3333;
+  }

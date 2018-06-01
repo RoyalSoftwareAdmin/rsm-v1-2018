@@ -19,16 +19,7 @@ label{
     color:#38ACDD;
 }
 
-.im{
-   width:30px;
-   float:left;
 
-}
-
-.ima{
-  width:28px;
-  float:left;
-}
 p{
    font-size: 20px;
 }
@@ -65,8 +56,15 @@ h1{
  margin-bottom: 20px;
   color:#5ACDF7;
 }
-
-
+.la3{
+   color: #0DA8EA;
+}
+.la1{
+   color: #4ACC4ACC;
+}
+.la2{
+   color: #F2B33F;
+}
 
 
    

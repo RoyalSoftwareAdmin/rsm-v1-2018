@@ -63,12 +63,12 @@
             
 					   <h3>General Instructions</h3>
           <ul>
-            <li> <span><img src="../images/right.png" class="im"></span>
-            <p class="q">Question is submitted</p></span></li>
-              <li> <span><img src="../images/eyes.png" class="ima"></span>
-            <p class="q">Question is kept for review</p></span></li>
-            <li> <span><img src="../images/wrong.jpg" class="im"></span>
-            <p class="q">Unanswered questions</p></li>
+            <li> 
+            <p class="q la1">Question is submitted</p></span></li>
+              <li> 
+            <p class="q la3">Question is kept for review</p></span></li>
+            <li> 
+            <p class="q la2">Unanswered questions</p></li>
           <li> 
             <p class="q">Keep eye on countdown timer(look up at right top corner reverse clock)</p></li>
             <li> 

@@ -71,9 +71,9 @@ session_start();
 			  <div id="questionParentLeft">
 			  <div class="qtnleft questionParent"></div>
 			  </div> 
-			  <div class="lab1 la1">Total Answered :</div>
-			  <div class="lab1 la2">Total UnAnswered :</div>
-			  <div class="lab1 la3">Total Review Pending :</div>
+			  <div class="lab1 la1">Total Answered :<span></span></div>
+			  <div class="lab1 la2">Total UnAnswered :<span></span></div>
+			  <div class="lab1 la3">Total Review Pending :<span></span></div>
 			  </div>
 		      
 		   	</div>
@@ -119,22 +119,17 @@ session_start();
 
 
 
-<div class="modal fade in" id="successModal_id" tabindex="-1" role="dialog" aria-labelledby="successModal_idLabel">
+<div class="modal fade in" id="successModal_id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<div class="modal-header">
 					
-						<h4 class="modal-title">thank you for attending test</h4>
-					</div>
 					<div class="modal-body">
 						<div class="row">
-							
-			      <p> successfully completed your test </p>
-						</div>
+							</div>
 					<div class="modal-footer">
 						<a href="index.php"><button type="button" class="btn btn-success">OK</button></a>
 						 
-						<button type="button" class="btn btn-danger" data-dismiss="modal fade in">Close</button>
+						<button type="button" class=" btn btn-danger exit" data-dismiss="modal">Close</button>
                              </div>
 					</div>
 				
@@ -144,7 +139,16 @@ session_start();
 
      
 </body>
+<script>
+window.onload=function()
+{
+setInterval(function(){ 
 
+$("#closemodal").click();
+}, 3000);
+
+}
+</script> 
 
 
 

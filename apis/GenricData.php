@@ -260,7 +260,7 @@
 			$correct_answer = $_POST["correct_answer"];
 			$entered_answer = $_POST["entered_answer"];
 			$test_date = date("Y/m/d");
-			$sql = "CREATE TABLE IF NOT EXISTS `$userName` (test_id varchar(3), cat_id varchar(10), div_id varchar(10), correct_option varchar(3), entered_option varchar(3), correct_answer varchar(300), entered_answer varchar(500), test_date date )";
+			$sql = "CREATE TABLE IF NOT EXISTS `$userName` (test_id varchar(3), cat_id varchar(10), div_id varchar(10), correct_option varchar(300), entered_option varchar(300), correct_answer varchar(300), entered_answer varchar(500), test_date date )";
 			$res = query($sql);
 			$sql = "INSERT INTO `$userName` VALUES ('".$test_id."','". $cat_id."', '".$div_id."', '".$correct_option."', '".$entered_option."', '".$correct_answer."', '".$entered_answer."', '".$test_date."')";
 			echo $sql;

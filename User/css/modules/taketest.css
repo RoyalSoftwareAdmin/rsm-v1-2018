@@ -1,3 +1,8 @@
+body{
+	background-color: #ccc;
+}
+
+
 .row{
 	margin: 0px;
 }
@@ -8,6 +13,7 @@
     border: 2px solid #C3C3C3;
     height: auto;
     border-radius: 10px;
+    background-color: #fff;
 }
 .header label{
 	margin: 1% 10px ;
@@ -82,7 +88,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-                     
+     background-color: #fff;                
   
 
 }
@@ -127,13 +133,13 @@ margin:auto 0;
 	margin-bottom: 20px;
 }
 .textareaDiv textarea{
-	
-    border: 2px solid #C3C3C3;
+	border: 2px solid #C3C3C3;
     border-radius: 10px;
 	width: 100%;
-	min-height: 210px;
+	min-height: 230px;
+
+
 	
-	margin-bottom: 20px;
 }
 .textareaDiv label {
 	display: block;
@@ -156,14 +162,17 @@ margin:auto 0;
 	border: 2px solid #C3C3C3;
     border-radius: 10px;
 	width: 100%;
-	min-height: 200px;
+	min-height: 230px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	    background-color: #fff;  
 }
 .QuestionButtonsParent{
 	 border: 2px solid #C3C3C3;
 	 border-radius: 10px;
 	 height: 550px;
+	  background-color: #fff;
+
 }
 #questionParentLeft{
     text-align: center;
@@ -171,6 +180,7 @@ margin:auto 0;
     color: #0DA8EA;
     display: table-cell;
     height: 420px;
+     background-color: #fff;
 
 }
 .lab1{
@@ -214,5 +224,15 @@ margin:auto 0;
   	border:none;
   }
   .modal{
-  	background-color: #3333;
+  
+  	    margin-left: 18%;
+    margin-top: 8%;
+  }
+  .btn-success{
+  	margin-left: 10px;
+  }
+  
+  .modal-body {
+  	color:#0DA8EA;
+  	text-align: center;
   }

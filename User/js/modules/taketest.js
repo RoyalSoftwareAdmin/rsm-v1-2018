@@ -36,6 +36,8 @@ $(document).ready( function(){
 			$('.question0').click();
 			$(".question").html(ResponseData[0].question);
 			//$('.question0').parent().addClass('active');
+			$('.la1 span, .la3 span').html(0);
+			$('.la2 span').html(ResponseData.length);
 		}
 
 
@@ -43,7 +45,7 @@ $(document).ready( function(){
 
 	var countDownDate = new Date().getTime(); 
  	var x = setInterval(function(){ 
-		var now = new Date(); now.setMinutes(now.getMinutes() - 1); 
+		var now = new Date(); now.setMinutes(now.getMinutes() - 30); 
 
 		now = now.getTime(); 
 		var left = countDownDate - now;
@@ -62,7 +64,9 @@ $(document).ready( function(){
 			clearInterval(x); 
 			document.getElementById("time").innerHTML = "You are Done!!";
 			$('#successModal_id').show();
-			
+				
+			$(".modal-body .row").html( " Thank You For Attending The Test <br />Successfully Completed Your Test");
+			$(".btn-danger").css( "visibility", "hidden");
 			
 			} 
 			
@@ -101,7 +105,7 @@ $(".submit").removeAttr("disabled")
 		var test_id = $(".active button").data("val"),
 			click_id = $(".active button").data("id"),
 			correct_option = $(".active input[name='correct_option']").data("val"),
-			entered_option = $(".correctOption input:checked").val(),
+			entered_option = $(".choiceListParent input:checked").val(),
 			correct_answer = $(".active input[name='correct_answer']").data("val"),
 			entered_answer = $(".enteredAnswer").val();
 			entered_option = (entered_option == undefined) ? 'Null' : entered_option;
@@ -120,17 +124,24 @@ $(".submit").removeAttr("disabled")
 		})
 		$(".question"+click_id).prop("disabled", "true").parent().addClass("submitted");
 		$('.question'+(click_id+1)).click();
-		
+		$(".la1 span").html((parseInt($(".la1 span").html())+1));
+          $(".la2 span").html((parseInt($(".la2 span").html())-1));
+        if(parseInt($(".la1 span").html()) == ResponseData.length){
+			$('#successModal_id').show();
+			$(".modal-body .row").html( " Thank You For Attending The Test <br />Successfully Completed Your Test");
+			
+			$(".btn-danger").css( "visibility", "hidden");
+			
+		}
+
 	})
 
 	$(".review").on("click", function(){
 		$(".active").addClass("review");
 		$(".question"+($(".active button").data("id") +1)).click();
+		$(".la3 span").html((parseInt($(".la3 span").html())+1));
+		$(".la2 span").html((parseInt($(".la2 span").html())-1));
 	})
-
-	/*$(".submit")on("click", function(){
-		$(".active").css("color","green");
-	})*/
 
 	   var $radio = $("input:radio");
        $radio.change(function () {
@@ -142,20 +153,22 @@ $(".submit").removeAttr("disabled")
         $(".submit").attr("disabled", "disabled");
        }
       });
+       
        $(".save").on("click",function(){
-	  $("#successModal_id").show();
+			$("#successModal_id").show();
+			
+			$(".modal-body .row").html( " Thank You For Attending The Test <br />Are you sure you want to exit");
+			$(".modal-body .row").css( "color","#0DA8EA");
+			$(".btn-danger").css( "visibility", "visible");
+		})
 
-	   $(".modal-title").css( "display","none");
-	  $(".modal-body .row").html( "Are you sure you want to exit");
-	  $(".btn-danger").css( "visibility", "visible");
+       
+
+       	 	
+
+ $(".exit").on("click",function(){
+ $("#successModal_id").hide();
 })
-
-       $(".").on("click",function(){
-       	 $("#successModal_id").show();
-         $(".modal-body .row").html( "Successufully completed 30 questions");
-       })
-
-
 	 
 	 
 

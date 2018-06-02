@@ -131,10 +131,7 @@ $(document).ready(function() {
 
 $(document).ready( function(){
 	$(".loggeduser").html(JSON.parse(localStorage.getItem("session")).fname);
-})
 
-
-$(document).ready( function(){
 	if (JSON.parse(localStorage.getItem("session")).gender == "Male" ) 
 	{ 
 		$(".prfil-img").html('<img src="../images/male.png" alt="">'); 
@@ -143,17 +140,17 @@ $(document).ready( function(){
 		{ 
 			$(".prfil-img").html('<img src="../images/female.png" alt="">'); 
 	}
-});
 
-
-$(document).ready( function(){
 	$('.treeview-menu li').on('click',function(){
-localStorage.setItem('section', $(this).attr('data-val'))
-})
-$(".divParent button").on("click", function(){
-localStorage.setItem('div', $(this).attr('data-val'))
+		localStorage.setItem('section', $(this).attr('data-val'))
+	})
+	$(".divParent button").on("click", function(){
+		localStorage.setItem('div', $(this).attr('data-val'))
+	})
 
-})
+	$('.item').on('click', function(){
+		localStorage.setItem('section', $(this).attr('data-val'))
+	})
 
 })
 

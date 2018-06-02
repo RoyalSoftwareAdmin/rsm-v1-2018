@@ -1,5 +1,5 @@
 <?php 
-	include_once("header.php");
+    include_once("header.php");
 ?>
 <!--//Metis Menu -->
 <style>
@@ -35,52 +35,52 @@
                         <h4 class="title">Know Skills</h4>
                     <!-- start content_slider -->
                     <div id="owl-demo" class="owl-carousel text-center">
-                        <div class="item">
+                        <div class="item" data-val="1">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider1.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Technical Skills</p>
                                 <p class="text1"><a href="#">Take Test</a></p></div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-val="2">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider2.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Analytical Skills</p>
                                 <p class="text1"><a href="#">Take Test</a></p></div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-val="3">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider3.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Logical Skills</p>
                                 <p class="text1"><a href="#">Take Test</a></p></div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-val="4">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider4.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Aptitude</p>
                                 <p class="text1"><a href="#">Take Test</a></p></div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-val="5">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider5.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Current Affairs</p>
                                 <p class="text1"><a href="#">Take Test</a></p></div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-val="7">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider6.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>All in One</p>
                                 <p class="text1"><a href="#">Take Test</a></p></div>
                             </div>
                         </div>
-                        <div class="item">
-                            <img class="lazyOwl img-responsive image" data-src="../images/slider7.jpg" alt="name">
+                        <div class="item" data-val="6">
+                            <img class="lazyOwl img-esponsive image" data-src="../images/slider7.jpg" alt="name">
                             <div class="middle">
-                                <div class="text"><p>Interview Special</p>
+                                <div class="text"><p>Company Specific</p>
                                 <p class="text1"><a href="#">Take Test</a></p></div>
                             </div>
                         </div>
@@ -114,7 +114,6 @@
                 disableOther( 'showLeftPush' );
             };
             
-
             function disableOther( button ) {
                 if( button !== 'showLeftPush' ) {
                     classie.toggle( showLeftPush, 'disabled' );
@@ -139,28 +138,26 @@
     <script src="../js/SimpleChart.js"></script>
     <script>
         var userName = JSON.parse(localStorage.getItem("session")).userName;
-        $.ajax({
-            url : "../apis/GenricData.php",
-            method : "POST",
-            data : {"layout" : 1010, "userName":userName},
-            success : function(data){
-                    ResponseData = JSON.parse(data);
+        // $.ajax({
+        //     url : "../apis/GenricData.php",
+        //     method : "POST",
+        //     data : {"layout" : 1010, "userName":userName},
+        //     success : function(data){
+        //             ResponseData = JSON.parse(data);
                     
-                    var template = '' , template1 = '';
-                    for (var i = 0 ; i< (ResponseData.length/2) ; i++){
-                        template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+' </button><span><i class="fa fa-times"></i></span></div>';
+        //             var template = '' , template1 = '';
+        //             for (var i = 0 ; i< (ResponseData.length/2) ; i++){
+        //                 template += '<div class="qtnleft questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+' </button><span><i class="fa fa-times"></i></span></div>';
                         
-                    }
-                    for (var i = (ResponseData.length/2) ; i < ResponseData.length ; i++){
-                        template1 += '<div class="qtnright questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+'</button> <span><i class="fa fa-times"></i></span></div>'; 
-                    }
-                    $('#questionParentLeft').html(template);
-                    $('#questionParentRight').html(template1);  
-                    $(".question1").click();
-                }
-
-
-            })
+        //             }
+        //             for (var i = (ResponseData.length/2) ; i < ResponseData.length ; i++){
+        //                 template1 += '<div class="qtnright questionParent"><input type="hidden" name="correct_option" data-val="'+ResponseData[i].correct_option+'"><input type="hidden" name="correct_answer" data-val="'+ResponseData[i].writtenanswer+'"><button type="button" class="btn questionBtn question'+(i+1)+'"  data-val='+ResponseData[i].test_id+'>Question '+(i+1)+'</button> <span><i class="fa fa-times"></i></span></div>'; 
+        //             }
+        //             $('#questionParentLeft').html(template);
+        //             $('#questionParentRight').html(template1);  
+        //             $(".question1").click();
+        //         }
+        //     })
         var graphdata1 = {
             linecolor: "#CCA300",
             title: "Monday",
@@ -295,23 +292,14 @@
             });
         });
 $(document).ready(function() {
-
             $("#owl-demo").owlCarousel({
-
                 items : 3,
-
                 lazyLoad : true,
-
                 autoPlay : true,
-
                 pagination : true,
-
                 nav:true,
-
             });
-
         });
-
     </script>
     <!-- //for index page weekly sales java script -->
     

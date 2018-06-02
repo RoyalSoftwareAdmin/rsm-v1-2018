@@ -39,21 +39,21 @@
                             <img class="lazyOwl img-responsive image" data-src="../images/slider1.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Technical Skills</p>
-                                <p class="text1"><a href="#">Take Test</a></p></div>
+                                <p class="text1"><a href="index.php?file=technical">Take Test</a></p></div>
                             </div>
                         </div>
                         <div class="item" data-val="2">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider2.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Analytical Skills</p>
-                                <p class="text1"><a href="#">Take Test</a></p></div>
+                                <p class="text1"><a href="index.php?file=analytical">Take Test</a></p></div>
                             </div>
                         </div>
                         <div class="item" data-val="3">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider3.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Logical Skills</p>
-                                <p class="text1"><a href="#">Take Test</a></p></div>
+                                <p class="text1"><a href="index.php?file=logical">Take Test</a></p></div>
                             </div>
                         </div>
                         <div class="item" data-val="4">

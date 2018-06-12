@@ -243,8 +243,8 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		            <div class="r3_counter_box">
 		                <i class="pull-left fa fa-laptop user1 icon-rounded"></i>
 		              <div class="stats">
-		                 <h5><strong>Ready</strong></h5>
-		                  <span>Take Test</span>
+		                	<div data-val="All in One"> <a href="?file=aio"> <h5><strong>Ready</strong></h5>
+		                  <span>Take Test</span></a></div>
 		                </div>
 		            </div>
 		        </div>
@@ -252,8 +252,8 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		            <div class="r3_counter_box">
 		                <i class="pull-left fa fa-money user2 icon-rounded"></i>
 		                <div class="stats">
-		                  <h5><strong>Recharge</strong></h5>
-		                  <span>Account</span>
+		                <a href="?file=payment"> <h5><strong>Recharge</strong></h5>
+		                  <span>Account</span></a>
 		                </div>
 		            </div>
 		        </div>
@@ -261,8 +261,8 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		            <div class="r3_counter_box">
 		                <i class="pull-left fa fa-pie-chart dollar1 icon-rounded"></i>
 		                <div class="stats">
-		                  <h5><strong>Report</strong></h5>
-		                  <span>Test Result</span>
+		                  <a href="?file=reports"> <h5><strong>Report</strong></h5>
+		                  <span>Test Result</span></a>
 		                </div>
 		            </div>
 		         </div>
@@ -270,8 +270,8 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		            <div class="r3_counter_box">
 		                <i class="pull-left fa fa-users dollar2 icon-rounded"></i>
 		                <div class="stats">
-		                  <h5><strong>Remark</strong></h5>
-		                  <span>Your Skills</span>
+		                    <a href="?file=remarks"><h5><strong>Remark</strong></h5>
+		                  <span>Your Skills</span></a>
 		                </div>
 		            </div>
 		         </div>

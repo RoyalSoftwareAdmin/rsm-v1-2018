@@ -60,28 +60,28 @@
                             <img class="lazyOwl img-responsive image" data-src="../images/slider4.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Aptitude</p>
-                                <p class="text1"><a href="#">Take Test</a></p></div>
+                                <p class="text1"><a href="index.php?file=aptitude">Take Test</a></p></div>
                             </div>
                         </div>
                         <div class="item" data-val="5">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider5.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Current Affairs</p>
-                                <p class="text1"><a href="#">Take Test</a></p></div>
+                                <p class="text1"><a href="index.php?file=ca">Take Test</a></p></div>
                             </div>
                         </div>
                         <div class="item" data-val="7">
                             <img class="lazyOwl img-responsive image" data-src="../images/slider6.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>All in One</p>
-                                <p class="text1"><a href="#">Take Test</a></p></div>
+                                <p class="text1"><a href="index.php?file=aio">Take Test</a></p></div>
                             </div>
                         </div>
                         <div class="item" data-val="6">
                             <img class="lazyOwl img-esponsive image" data-src="../images/slider7.jpg" alt="name">
                             <div class="middle">
                                 <div class="text"><p>Company Specific</p>
-                                <p class="text1"><a href="#">Take Test</a></p></div>
+                                <p class="text1"><a href="index.php?file=cs">Take Test</a></p></div>
                             </div>
                         </div>
                         

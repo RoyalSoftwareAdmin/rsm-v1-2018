@@ -152,6 +152,24 @@ $(document).ready( function(){
 		localStorage.setItem('section', $(this).attr('data-val'))
 	})
 
+
+$('.stats div').on('click',function(){
+		localStorage.setItem('section', $(this).attr('data-val'))
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
 
 

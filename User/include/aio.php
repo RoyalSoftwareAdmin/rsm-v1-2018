@@ -3,10 +3,10 @@
     <div class="col-md-12 content-top-2 card">
         <div class="agileinfo-cdr">
             <div class="card-header sign-u">
-               <div class="container">
+               <div class="container divParent">
                     <div class="row">
                        <div class="col-md-4">
-                           <a href=""><button class="comm">Volume 1</button></a>
+                           <a href="userinstructions.php"><button class="comm" data-val= "Volume 1">Volume 1</button></a>
                        </div>
                     </div>
                 </div>
@@ -15,4 +15,4 @@
     </div>      
     <div class="clearfix"> </div>
 </div>
-<script src="js/modules/cs.js"></script>  
+<!--<script src="js/modules/.js"></script>  -->

@@ -1,3 +1,6 @@
+
+
+
 <link rel="stylesheet" href="css/modules/profile.css" type="text/css" media="all" />
  <div class="row-one widgettable">
     <div class="col-md-12 content-top-2 card">
@@ -17,11 +20,13 @@
 					<div class="tabs-menu">
 					<div id="menu">
 						<ul class="nav nav-tabs">
-							<li class="active"><a href="#tab1">Personal</a></li>
-							<li><a class="tab2" href="#tab2">Education</a></li>
-							<li><a class="tab3" href="#tab3">Technical</a></li>
-							<li><a class="tab4" href="#tab4">Contact</a></li>
+                           
+							<li><a  href="#tab1" class="active-tab">Personal</a></li>
+							<li><a class="tab2 active" href="#tab2">Education</a></li>
+							<li><a class="tab3 " href="#tab3">Technical</a></li>
+							<li><a class="tab4 " href="#tab4">Contact</a></li>
 							<li><a class="tab5" href="#tab5">Others</a></li>
+						
 						</ul>
 					</div>
 					</div>
@@ -37,7 +42,7 @@
 							      	<p>State</p>
 							      	<select id="stateList"></select>
 							      	<p>Zip</p>
-							      	<input type="text" class="pass zipp" id="zip" maxlength="6"class="pn" />
+							      	<input type="text" class="pass zipp" id="zip" maxlength="6" class="pn" />
 									<div class="error"></div>
 									<a class="button outline-inward submit" id="personal">NEXT</a>
 							 	</form>
@@ -108,5 +113,10 @@
         </div>
     </div>      
     <div class="clearfix"> </div>
+
+
+
+
+    
 <script type="text/javascript" src="js/common/lists.js"></script>
 <script src="js/modules/profile.js">  

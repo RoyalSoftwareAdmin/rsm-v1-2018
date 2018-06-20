@@ -27,29 +27,29 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 	  <meta property="og:title"         content="Royal Softwares" />
 	  <meta property="og:description"   content="Royal Softwares is the  best software company in mysore." />
 	  <meta property="og:image"         content="http://www.royalsoftwaresolution.com/wp-content/uploads/2018/01/mysexpo-12.png" />
+
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
-	<!-- Bootstrap Core CSS -->
+	
 	<link href="../css/Bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="../css/dataTables.bootstrap.css" rel='stylesheet' type='text/css' />
 
-	<!-- Custom CSS -->
+	
 	<link href="../css/style.css" rel='stylesheet' type='text/css' />
 	
-	<!-- font-awesome icons CSS -->
+	
 	<link href="../css/font-awesome.css" rel="stylesheet"> 
-	<!-- //font-awesome icons CSS-->
+	
 
-	<!-- side nav css file -->
 	<link href='../css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>
-	<!-- //side nav css file -->
+	
 	 
-	 <!-- js-->
+	
 	<script src="../js/jquery-1.11.1.min.js"></script>
 	<script src="../js/modernizr.custom.js"></script>	
-	<!--webfonts-->
-	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
-	<!--//webfonts--> 
+	
+	<!--<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">-->
+	
 
 	<!-- chart -->
 	<script src="../js/Chart.js"></script>
@@ -110,7 +110,7 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		          	<li data-val="4"><a href="?file=aptitude"><i class="fa fa-angle-right"></i> Aptitude </a></li>
 		          	<li data-val="5"><a href="?file=ca"><i class="fa fa-angle-right"></i> Current Affairs</a></li>
 		          	<li data-val=" Company Specific"><a href="?file=cs"><i class="fa fa-angle-right"></i> Company Specific</a></li>
-		          	<li data-val="All in One"><a href="?file=aio"><i class="fa fa-angle-right"></i> All in One</a></li>
+		          	<li data-val="6"><a href="?file=aio"><i class="fa fa-angle-right"></i> All in One</a></li>
             	</ul>
               </li>	
               <li class="treeview">
@@ -233,7 +233,7 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		            <div class="r3_counter_box">
 		               <i class="pull-left fa fa-dollar icon-rounded"></i>
 		                <div class="stats">
-		                  <h5><strong>200 Rs</strong></h5>
+		                  <div class="balance"><span></span></div>
 		                  <span>Current Balance</span>
 		                </div>
 		            </div>
@@ -242,9 +242,9 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		       <div class="col-md-3 widget widget1">
 		            <div class="r3_counter_box">
 		                <i class="pull-left fa fa-laptop user1 icon-rounded"></i>
-		              <div class="stats">
-		                	<div data-val="All in One"> <a href="?file=aio"> <h5><strong>Ready</strong></h5>
-		                  <span>Take Test</span></a></div>
+		              <div class="stats" data-val="6">
+		                	 <h5><strong>Ready</strong></h5>
+		                  <span>Take Test</span>
 		                </div>
 		            </div>
 		        </div>

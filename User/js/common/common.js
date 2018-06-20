@@ -1,3 +1,6 @@
+
+
+
 var isalpha = function (val){
 	if(val != "" || val != undefined){
 		var pattern = /^[a-zA-Z ]{2,30}$/;
@@ -128,6 +131,11 @@ $(document).ready(function() {
 		 })
    	})
 }); 
+var error = "";
+var email = JSON.parse(localStorage.getItem("session")).email;
+var amount = localStorage.getItem("Amount");
+var userName = JSON.parse(localStorage.getItem("session")).userName;
+var balance = localStorage.getItem("balance");
 
 $(document).ready( function(){
 	$(".loggeduser").html(JSON.parse(localStorage.getItem("session")).fname);
@@ -153,23 +161,56 @@ $(document).ready( function(){
 	})
 
 
-$('.stats div').on('click',function(){
-		localStorage.setItem('section', $(this).attr('data-val'))
+$('.stats').on('click',function(){
+		localStorage.setItem('section ', $(this).attr('data-val'));
+		localStorage.setItem('div ', "29");
+		window.location = "userinstructions.php";
 	})
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+$.ajax({
+		 	url : "../apis/GenricData.php",
+		 	data : {"layout" : "1011" , "userName" : userName},
+		 	method: "POST",
+		 	success: function(result){
+				result = JSON.parse(balance);
+				$('.balance span').html(result);
+				
+		 		console.log(result);
+		 	},
+		 	error : function(result){
+		 		console.log(result);
+		 	}
+	})
 })
 
+
+
+
+
+
+
+
+
+
+
+
+/*$(document).ready( function(){
+	$.ajax({
+		url : "../apis/GenricData.php",
+	method : "POST",
+	data : {"layout" : 1011 ,"userName" : userName },
+	success: function(result){
+		result = JSON.parse(result);
+		$('.balance').val(result.balance);
+		
+	error : function(result)
+	{
+			console.log(result);
+	}
+	
+	
+	})
+})*/
 

@@ -73,9 +73,7 @@ body {
     width: 80%;
     padding: 30px 20px;
 }
-.profile .tabs-menu .active a{
-    color:#fe9753;
-}
+
 .profile .nav-tabs > li{
     width: 100%;
 }
@@ -98,12 +96,12 @@ body {
 }
 .profile .tabs-menu ul li a:hover {
     background-color: #629aa9;
+
 	-webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-	 
-}
+	 }
 .profile a {
     color: #FFF;
 }
@@ -735,5 +733,8 @@ form.profile {
 }
 
 
+.active-tab{
+    color:#fe9753!important;
+}
 
-/*--- Responsinator Code ---*/s
+/*--- Responsinator Code ---*/

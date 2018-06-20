@@ -271,6 +271,53 @@
 				echo json_encode(array('Status' => "Invalid UserName and Password"));
 			}
       }  
+
+
+
+      if($_POST['layout'] === "1010"){ 
+		   $userName = $_POST["userName"];
+			$sql = "select * from .`$userName`";
+
+			$res = query($sql);
+			if($res->num_rows  >= 1) {
+				$val = 0;
+				$row = array( 'Category' => [], 'Division' => [],'Test Date' =>[], 'CorrectAnswer' => []);
+				while($r = $res -> fetch_assoc()) {
+				    
+				    $row['Category'][$val] = $r['cat_id'];
+				    $row['Division'][$val] = $r['div_id'];
+				    $row['Test Date'][$val] = $r['test_date'];
+				    $row['CorrectAnswer'][$val] = 'null';
+				    $val++;
+				}
+	        	$result_array =  array("tableHeader" => [["heading"=>"Category"], ["heading" => "Division" ],["heading" => "Test Date"], ["heading" => "CorrectAnswer"]],"tableData" => [$row]);
+				
+		  	 	echo json_encode($result_array);
+	        }
+	        else {
+	      		 echo json_encode(array('Status' => 'Failure'));
+	   		} 
+			exit();
+		}	
+
+
+
+
+		if($_POST['layout'] === "1011"){ 
+			$userName = $_POST["userName"];
+			
+			//$sql = "select balance from  rsm_payment where userName=".`$userName`;
+			$sql = "select balance from  rsm_payment where userName='".$userName."'";
+			
+			$res = query($sql);
+			if($res->num_rows  >= 1) {
+		  	 	echo json_encode($res);
+	        }
+	        else {
+	      		 echo json_encode(array('Status' => 'Failure'));
+	   		} 
+			exit();
+		}	
 		
 	}
 		

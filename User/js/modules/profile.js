@@ -52,34 +52,49 @@ $(document).ready(function(){
 	$("#bloodList").html(bloodOption);   
 
 	$(".tabs-menu a").click(function(event){
+		$(".tabs-menu a").removeClass('active-tab');
+		$(this).addClass('active-tab');
 		event.preventDefault();
 		var tab=$(this).attr("href");
 		$(".tab-grid").not(tab).css("display","none");
+		
 	    $(tab).fadeIn("slow");
 	});
 
 
 	$("#personal").on("click", function(){
-		$("ul li").each(function(k){ $(this).removeClass("active") })
+		$("ul li").each(function(k){ $(this).removeClass("active")})
+    
 		$(".tab2").click();
 		$(".tab2").parent().addClass("active");
-	})
+	   
+
+		})
+	
+
+
 	$("#education").on("click", function(){
 		$("ul li").each(function(k){ $(this).removeClass("active") })
 		$(".tab3").click();
 		$(".tab3").parent().addClass("active");
+		
+		
 	})    
 
 	$("#technical").on("click", function(){
 		$("ul li").each(function(k){ $(this).removeClass("active") })
 		$(".tab4").click();
 		$(".tab4").parent().addClass("active");
+		
+		
 	})
 
 	$("#contact").on("click", function(){
 		$("ul li").each(function(k){ $(this).removeClass("active") })
 		$(".tab5").click();
 		$(".tab5").parent().addClass("active");
+		
+		
 	})
  
 

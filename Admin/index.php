@@ -66,87 +66,87 @@
 			
 		</div>
 		
-	 <div class="main-pain2">
-		<div class="row">
-				
-				<div class="col-md-6 ws">
-				 <div class="weeksale">
-				 </div>
-                </div>
- 
-                
-				<div class="col-md-3">
-				 <div class="weeksale2 ">
-				 </div>
-			   </div>
-			   
-			   
-			   <div class="col-md-3">
-				 <div class="weeksale3">
-				 </div>
-			   </div>
-			   
-			   <div class="col-md-3">
-				 <div class="weeksale3">
-				 </div>
-			   </div>
-			   
-			   
-			    <div class="col-md-3">
-				 <div class="weeksale3">
-				 </div>
-			   </div>
-			   
-			   <div class="col-md-3">
-				 <div class="socialmedia">
-				 </div>
-               </div>	
-			   
-			   <div class="col-md-3">
-				 <div class="socialmedia">
-				 </div>
-               </div>	
-			
-			</div>
-			
-			
-		<div class="row">
-	      
-		  <div class="col-md-6">
-		    <div class="bargraph">
-			</div>
-		  </div>
-		  
-		  <div class="col-md-6">
-		    <div class="colgraph">
-			</div>
-		  </div>
-		  
-		  
-		</div>
-			
-			
-			
-			
-			
-			<div class="clearfix"></div>
-		</div>
+	 <!--<div class="main-pain2">
+		
+		</div>-->
 		
    
     <?php
         if(isset($_GET['file'])){                           
             include('include/'.$_GET['file'].'.php');
         }else{ ?>
+		
              <div class="row-one widgettable">
                 <div class="col-md-12 content-top-2 card">
                     <div class="agileinfo-cdr">
-                        <div class="card-header">                            
-                            <div  class="table" id="users"></div>
-                        </div>                            
-                    </div>
-                </div>      
-                <div class="clearfix"> </div>
-            </div>  
+                        
+						<!--div class="card-header">                            
+                           <div  class="table" id="users"></div>      
+			            </div>-->
+						<div class="row">
+						<div class="col-md-6">
+				             <div class="weeksale">
+				             </div>
+                        </div>
+ 
+                              
+				           <div class="col-md-3">
+				            <div class="weeksale2 ">
+				            </div>
+			               </div>
+			   
+			   
+			               <div class="col-md-3">
+				            <div class="socialmedia">
+				            </div>
+			               </div>
+			   
+			              
+						  <div class="col-md-3">
+				           <div class="weeksale2">
+				           </div>
+			              </div>
+			   
+			   
+			              <div class="col-md-3">
+				           <div class="socialmedia">
+				           </div>
+			              </div>
+			   
+			              <div class="col-md-3">
+				           <div class="weeksale2">
+				           </div>
+                          </div>	
+			   
+			              
+						  <div class="col-md-3">
+				           <div class="socialmedia">
+				           </div>
+                          </div>
+                          </div>	
+			 		<div class="row">
+			 			<div class="col-md-6">
+			 				<div class="bargraph"></div>
+			 			</div>
+			 			<div class="col-md-6">
+			 				<div class="colgraph"></div>
+			 			</div>
+			 		</div>
+          
+
+
+
+
+
+          </div>
+		   </div>
+        </div> 
+
+     		
+     <div class="clearfix"> </div>
+   </div>  
+   
+   	
             <script type="text/javascript" src="js/modules/index.js"></script>
       <?php  } ?>    
                
@@ -155,7 +155,7 @@
         <div class="charts">        
             
         </div>
-            </div>
+        </div>
         </div>
    
  <?php include_once("footer.php"); ?>

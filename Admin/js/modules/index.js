@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $.ajax({
         url: '../apis/AdminData.php',
         type: 'POST',
@@ -20,8 +20,8 @@ $(document).ready(function(){
             console.log(error);
         }
     });   
-})  
+})  */
 
-function redirecttopage(jsonValue) {
+/*function redirecttopage(jsonValue) {
     var SelectedData = jsonValue;   
-}
+}*/

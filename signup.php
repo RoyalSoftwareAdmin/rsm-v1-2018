@@ -32,10 +32,14 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		<link href="css/custom.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/modules/signup.css">
 
+
 	</head> 
+
+	
 	<body class="cbp-spmenu-push">
 		
 		<div class="main-content">
+			
 			<div class="logo1">
 			<img src= "images/logo.png" />
 		</div>
@@ -85,18 +89,26 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 							<div class="clearfix"> </div>
 						<div class="sub_home">
 								<input type="button" id="submit" value="Submit">
+							
+                          
 							<div class="clearfix"> </div>
 						</div>
+
 						<div class="registration">
 							Already Registered.
 							<a class="" href="login.php">
 								Login
 							</a>
 						</div>
+						
+
+
 					</div>
 				</div>
 			</div>
 			
+			
+
 			<div class="modal fade in" id="errModal" tabindex="-1"  aria-hidden="true">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
@@ -114,9 +126,14 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 			  </div>
 			</div>
 		</div>
+
+
 		<div class="footer">
 		   <?php include("footer.php"); ?>
 		</div>
+
+
+
 		<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModal">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -135,8 +152,14 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
+</div>
+
+<div class="lds-css ng-scope">
+<div class="lds-spinner" style="100%;height:100%"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                          
 		
 		<script src="js/bootstrap.js"> </script>
-		<script type="text/javascript" src="js/modules/signup.js"></script>		
+		<script type="text/javascript" src="js/modules/signup.js"></script>	
+
 	</body>
 </html>

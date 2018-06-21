@@ -1,6 +1,7 @@
 var error = "";
 		
 $("#submit").on("click", function(){
+
 	$(".error").html("");
 	var name = $("#name").val(),
 		lname = $("#lname").val(),
@@ -41,6 +42,7 @@ $("#submit").on("click", function(){
 		$(".error").html(error).css({"color":"#FF0000" , "font-weight":"bold" , "text-align": "center" , "margin": "10px 0px"});
        }
    else{
+   	$('.ng-scope').show();
 		$.ajax({
 			url : "apis/GenricData.php",
 			data : {"layout" : 1001, "fname" :name ,"lname":lname, "email": email, "password" : password , "gender" : gender},
@@ -49,16 +51,19 @@ $("#submit").on("click", function(){
 		     result = JSON.parse(resultData);
 			 if(result.Status == 1){
 				$("#successModal").modal("show");
+					$('.ng-scope').hide();
 			 }	 
 			 else{
 			 	$(".modal-body").html(result.Status);
 				$("#errModal").show();
+				$('.ng-scope').hide();
 				 }
 			},
 			error : function(error) {
 				console.log(error.responseText);
 				$(".modal-body").html(error.responseText);
 				$("#errModal").show();
+				$('.ng-scope').hide();
 			}
 			
 			
@@ -72,3 +77,5 @@ $(document).ready(function(){
 		 window.location = "login.php";  
 	})
 })
+
+

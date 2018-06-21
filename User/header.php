@@ -233,7 +233,7 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 		            <div class="r3_counter_box">
 		               <i class="pull-left fa fa-dollar icon-rounded"></i>
 		                <div class="stats">
-		                  <div class="balance"><span></span></div>
+		                  <div class="balance"><h5><strong class="curBal"></strong></h5></div>
 		                  <span>Current Balance</span>
 		                </div>
 		            </div>

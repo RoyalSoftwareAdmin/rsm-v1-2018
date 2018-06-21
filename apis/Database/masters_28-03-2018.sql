@@ -226,7 +226,21 @@ CREATE TABLE `rsm_test` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
-
+-- Table structure for table `rsm_company_test`
+--CREATE TABLE `rsm_company_test` (
+  `test_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  
+  `question` varchar(200) NOT NULL,
+  `option1` varchar(100) NOT NULL,
+  `option2` varchar(100) NOT NULL,
+  `option3` varchar(100) NOT NULL,
+  `option4` varchar(100) NOT NULL,
+  `correct_option` varchar(100) NOT NULL,
+  `entered_option` varchar(100) NOT NULL,
+  `userid` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-------------------------------------------------------------
 --
 -- Table structure for table `rsm_user`
 --

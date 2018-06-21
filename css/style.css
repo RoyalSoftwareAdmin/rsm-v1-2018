@@ -7831,8 +7831,8 @@ h4.asd label {
 		font-size: 1.4em;
 	}
 	.header-left {
-		width: 100%;
-		float:none;
+		width: 10%;
+		float:left;
 	}
 	.header-right {
 		float:none;
@@ -7846,7 +7846,7 @@ h4.asd label {
 		margin-right: 2em;
 	}
 	.cbp-spmenu-push div#page-wrapper {
-		padding: 2em 1em 2em;
+		padding: 6em 1em 2em;
 	}
 	.input__label {
 		width: 90%;

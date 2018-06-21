@@ -307,11 +307,14 @@
 			$userName = $_POST["userName"];
 			
 			//$sql = "select balance from  rsm_payment where userName=".`$userName`;
-			$sql = "select balance from  rsm_payment where userName='".$userName."'";
-			
-			$res = query($sql);
-			if($res->num_rows  >= 1) {
-		  	 	echo json_encode($res);
+			$sql = "select * from  rsm_payment where userName='".$userName."'";
+			$result = query($sql);
+			if($result->num_rows >= 1) {
+		  	 	while($r = $result -> fetch_assoc()) {
+				    
+				    $row['balance']= $r['balance'];
+				}
+				echo json_encode($row);
 	        }
 	        else {
 	      		 echo json_encode(array('Status' => 'Failure'));

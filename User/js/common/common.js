@@ -1,6 +1,3 @@
-
-
-
 var isalpha = function (val){
 	if(val != "" || val != undefined){
 		var pattern = /^[a-zA-Z ]{2,30}$/;
@@ -115,13 +112,13 @@ $(document).ready(function() {
 
 	});
 
-	// if((height - reheight) > 100 ){
- //  		$("body").html("<div class='thief'><div class='thiefMsg'> Your IP ("+ip+") is watching, Don't try to hack </div></div>");
-	// 	setTimeout(function(){
-	// 		window.location = "http://www.royalsoftwaresolution.com"
-	// 	},1000);
+	if((height - reheight) > 100 ){
+  // 		$("body").html("<div class='thief'><div class='thiefMsg'> Your IP ("+ip+") is watching, Don't try to hack </div></div>");
+		// setTimeout(function(){
+		// 	window.location = "http://www.royalsoftwaresolution.com"
+		// },1000);
 
- //  	}
+  	}
    	$(".logout").on("click", function(){
    		localStorage.clear()
    		$.ajax({
@@ -131,13 +128,9 @@ $(document).ready(function() {
 		 })
    	})
 }); 
-var error = "";
-var email = JSON.parse(localStorage.getItem("session")).email;
-var amount = localStorage.getItem("Amount");
-var userName = JSON.parse(localStorage.getItem("session")).userName;
-var balance = localStorage.getItem("balance");
 
 $(document).ready( function(){
+	var userName = JSON.parse(localStorage.getItem("session")).userName
 	$(".loggeduser").html(JSON.parse(localStorage.getItem("session")).fname);
 
 	if (JSON.parse(localStorage.getItem("session")).gender == "Male" ) 
@@ -160,57 +153,21 @@ $(document).ready( function(){
 		localStorage.setItem('section', $(this).attr('data-val'))
 	})
 
-
-$('.stats').on('click',function(){
-		localStorage.setItem('section ', $(this).attr('data-val'));
-		localStorage.setItem('div ', "29");
-		window.location = "userinstructions.php";
-	})
-
-
-
-$.ajax({
-		 	url : "../apis/GenricData.php",
-		 	data : {"layout" : "1011" , "userName" : userName},
-		 	method: "POST",
-		 	success: function(result){
-				result = JSON.parse(balance);
-				$('.balance span').html(result);
-				
-		 		console.log(result);
-		 	},
-		 	error : function(result){
-		 		console.log(result);
-		 	}
-	})
-})
-
-
-
-
-
-
-
-
-
-
-
-
-/*$(document).ready( function(){
 	$.ajax({
 		url : "../apis/GenricData.php",
-	method : "POST",
-	data : {"layout" : 1011 ,"userName" : userName },
-	success: function(result){
+		data : {"layout" : "1011", "userName": userName},
+		method: "POST",
+		success: function(result){
 		result = JSON.parse(result);
-		$('.balance').val(result.balance);
-		
-	error : function(result)
-	{
+			$(".curBal").html("Rs "+result.balance);
+			 
+		},
+		error : function(result){
 			console.log(result);
-	}
-	
-	
+		}
 	})
-})*/
+	
+
+})
+
 

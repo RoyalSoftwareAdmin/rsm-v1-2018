@@ -112,13 +112,13 @@ $(document).ready(function() {
 
 	});
 
-	// if((height - reheight) > 100 ){
- //  		$("body").html("<div class='thief'><div class='thiefMsg'> Your IP ("+ip+") is watching, Don't try to hack </div></div>");
-	// 	setTimeout(function(){
-	// 		window.location = "http://www.royalsoftwaresolution.com"
-	// 	},1000);
+	if((height - reheight) > 100 ){
+  // 		$("body").html("<div class='thief'><div class='thiefMsg'> Your IP ("+ip+") is watching, Don't try to hack </div></div>");
+		// setTimeout(function(){
+		// 	window.location = "http://www.royalsoftwaresolution.com"
+		// },1000);
 
- //  	}
+  	}
   	$(".logout").on("click", function(){
   		localStorage.clear()
   		$.ajax({

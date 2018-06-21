@@ -11,7 +11,7 @@
 		<div class="container divParent">
 		 <div class="row">
 		   
-		   <div class="col-md-4">
+		   <div class="col-md-4 hide">
 		     <a href="userinstructions.php"><button class="diagram" data-val="15">Diagrammatic</button></a>
 		   </div>
 		   
@@ -19,12 +19,9 @@
 		    <a href="userinstructions.php"><button class="verbal"  data-val="16">Verbal</button></a>
 		   </div>
 		   
-		   <div class="col-md-4">
+		   <div class="col-md-4 hide">
 		    <a href="userinstructions.php"><button class="non-verbal"  data-val="17">Non-Verbal</button></a>
 		   </div>
-		   </div>
-		   
-		  <div class="row"> 
 		   
 		   <div class="col-md-4">
 		   <a href="userinstructions.php"> <button class="numeric"  data-val="18">Numerical</button></a>
@@ -33,8 +30,6 @@
 		    <div class="col-md-4">
 		    <a href="userinstructions.php"><button class="situation"  data-val="19">Situational</button></a>
 		   </div>
-		   
-		 </div> 
 		</div>
 			
 			

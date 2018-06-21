@@ -8,6 +8,130 @@
   height: 295px;
 }
 </style>
+<!-- Main details  -->
+ 	 <div id="page-wrapper">
+        <div class="main-page">
+			<div class="row">
+				<div class="col_3">
+		        <div class="col-md-3 widget widget1">
+		            <div class="r3_counter_box">
+		               <i class="pull-left fa fa-dollar icon-rounded"></i>
+		                <div class="stats">
+		                  <!--<h5><strong>200 Rs</strong></h5>-->
+		                  <span>Total Revenue</span>
+		                </div>
+		            </div>
+		        </div>
+
+		       <div class="col-md-3 widget widget1">
+		            <div class="r3_counter_box">
+		                <i class="pull-left fa fa-laptop user1 icon-rounded"></i>
+		              <div class="stats">
+		                	<div data-val="All in One"> <a href="?file=aio"> <!--<h5><strong>Ready</strong></h5>-->
+		                 <span>Online Revenue</span></a></div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-md-3 widget widget1">
+		            <div class="r3_counter_box">
+		                <i class="pull-left fa fa-money user2 icon-rounded"></i>
+		                <div class="stats">
+		                <a href="?file=payment"> <!--<h5><strong>Recharge</strong></h5>-->
+		                  <span>Expenses</span></a>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-md-3 widget widget1">
+		            <div class="r3_counter_box">
+		                <i class="pull-left fa fa-pie-chart dollar1 icon-rounded"></i>
+		                <div class="stats">
+		                  <a href="?file=reports"> <!--<h5><strong>Report</strong></h5>-->
+		                  <span>Expenditure</span></a>
+		                </div>
+		            </div>
+		         </div>
+		        <div class="col-md-3 widget">
+		            <div class="r3_counter_box">
+		                <i class="pull-left fa fa-users dollar2 icon-rounded"></i>
+		                <div class="stats">
+		                    <a href="?file=remarks"><!--<h5><strong>Remark</strong></h5>-->
+		                  <span>Total Users</span></a>
+		                </div>
+		            </div>
+		         </div>
+			</div>
+			
+		        <div class="clearfix"> </div>
+		    </div>
+			
+		</div>
+		
+	 <div class="main-pain2">
+		<div class="row">
+				
+				<div class="col-md-6 ws">
+				 <div class="weeksale">
+				 </div>
+                </div>
+ 
+                
+				<div class="col-md-3">
+				 <div class="weeksale2 ">
+				 </div>
+			   </div>
+			   
+			   
+			   <div class="col-md-3">
+				 <div class="weeksale3">
+				 </div>
+			   </div>
+			   
+			   <div class="col-md-3">
+				 <div class="weeksale3">
+				 </div>
+			   </div>
+			   
+			   
+			    <div class="col-md-3">
+				 <div class="weeksale3">
+				 </div>
+			   </div>
+			   
+			   <div class="col-md-3">
+				 <div class="socialmedia">
+				 </div>
+               </div>	
+			   
+			   <div class="col-md-3">
+				 <div class="socialmedia">
+				 </div>
+               </div>	
+			
+			</div>
+			
+			
+		<div class="row">
+	      
+		  <div class="col-md-6">
+		    <div class="bargraph">
+			</div>
+		  </div>
+		  
+		  <div class="col-md-6">
+		    <div class="colgraph">
+			</div>
+		  </div>
+		  
+		  
+		</div>
+			
+			
+			
+			
+			
+			<div class="clearfix"></div>
+		</div>
+		
    
     <?php
         if(isset($_GET['file'])){                           

@@ -13,6 +13,7 @@
 	    font-size: 22px;
 	    text-align: center;
 	    background: transparent;
+		/*display: none;*/
 }
 a .diagram:hover{
 	         background-color: #337ab7;
@@ -20,6 +21,8 @@ a .diagram:hover{
 }
 
 .verbal{
+	    float: left;
+		/*margin-right: 310px;*/
 	    color: #0099c1;
 	    width: 100%;
 	 	padding: 20px;

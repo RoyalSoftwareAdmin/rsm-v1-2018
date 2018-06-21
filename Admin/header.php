@@ -95,7 +95,7 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand" href="index.php"><span class="fa fa-area-chart"></span> Royal <span class="dashboard_text">Skills Master</span></a></h1>
+            <h1><a class="navbar-brand" href="index.php"><span class="fa fa-area-chart"></span>Royal <span class="dashboard_text">Skills Master</span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
@@ -194,6 +194,15 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 			<div class="header-left">
 				<!--toggle button start-->
 				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
+				
+				<button id="showLeftPush" class="b1"><i class="fa fa-envelope" style="font-size:inherit"></i></button>
+				
+				<button id="showLeftPush" class="b1"><i class="fa fa-bell" style="font-size:inherit"></i></button>
+				
+				<button id="showLeftPush"class="b1"><i class="fa fa-bars" style="font-size:inherit"></i></button>
+				
+				
+				
 				<!--toggle button end-->
 				<div class="profile_details_left"><!--notifications of menu start -->					
 					<div class="clearfix"> </div>
@@ -205,7 +214,7 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 				
 				
 				<!--search-box-->
-				<div class="search-box" >
+				<!--<div class="search-box" >
 					<form class="input">
 						<input class="sb-search-input input__field--madoka" placeholder="Search..." type="search" id="input-31" />
 						<label class="input__label" for="input-31" >
@@ -245,8 +254,6 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 			<div class="clearfix"> </div>	
 		</div>
 		<!-- //header-ends -->
- 	<!-- Main details  -->
- 	 <div id="page-wrapper">
-        <div class="main-page">
+ 	 
         	
                 

@@ -1,31 +1,59 @@
-﻿$.fn.ChartPlugin = function (params) {
+$.fn.ChartPlugin = function (params) {
     var ID = this.attr('id');
     var options = $.extend({}, params);
     var result = options.resultData
     $('#loader').hide();
 
-    var seriesArr = [], series = '', tablelength = result.tableHeader.length, datalength = result.tableData.length, yaxisArr = [], yaxis = '';
+    var seriesArr = [],
+        series = '', 
+        tablelength = result.tableHeader.length, 
+        datalength = result.tableData.length, 
+        yaxisArr = [], 
+        yaxis = '';
+
+
+          
+
+
     if (datalength !== 0) {
-        for (var lengthofkey = 1; lengthofkey < tablelength; lengthofkey++) {
-            var chartlabel = result.tableHeader[lengthofkey].heading, label = Object.keys(result.tableData[0])[lengthofkey];
-            if (label != "image") {
-                var label1 = result.tableHeader[lengthofkey].seriesType, datavalues = result.tableData[0][label], realdata = JSON.parse('[' + datavalues + ']'),
-                minimum = Math.min.apply(Math, realdata), maximum = Math.max.apply(Math, realdata), colorofseries = result.tableHeader[lengthofkey].color;
-                colrsforstatic = ['#0D47A1', '#64B5F6']
-                if (options.multipleYaxis == true) {
+        for (var lengthofkey = 1; lengthofkey < tablelength; lengthofkey++)
+         {
+            var chartlabel = result.tableHeader[lengthofkey].heading, 
+                label = Object.keys(result.tableData[0])[lengthofkey];
+
+    if (label != "Test Date"){
+                var label1 = "column", 
+               
+                    datavalues = result.tableData[0][label], 
+                    realdata = JSON.parse('[' + datavalues + ']'),
+                    minimum = Math.min.apply(Math, realdata), 
+                    maximum = Math.max.apply(Math, realdata), 
+                    colorofseries = result.tableHeader[lengthofkey].color;
+
+                     if(options.ChartType == "pie"){
+
+                          series = { 
+                            name :chartlabel,
+                            type:label1,
+                            y:realdata,
+
+                          }
+       
+        
+} 
+
+    if (options.multipleYaxis == true) {
                     series = {
                         name: chartlabel,
-                        type: label1,
-                        yAxis: lengthofkey - 1,
+                        type: options.ChartType ,
                         data: realdata,
                         color: colorofseries
                     };
                 } else {
                     series = {
                         name: chartlabel,
-                        type: label1,
+                        type:options.ChartType,
                         data: realdata,
-                        color: colorofseries
                     };
                 }
                 var labelforyaxis = lengthofkey - 1;
@@ -83,7 +111,7 @@
         if (options.multipleYaxis == false) {
             yaxisArr = yaxis;
         }
-        var xaxis = Object.keys(result.tableData[0])[0], xaxisvalues = (result.tableData[0][xaxis]);
+    var xaxis = Object.keys(result.tableData[0])[0], xaxisvalues = (result.tableData[0][xaxis]);
         Highcharts.chart(ID, {
             reflow: true,
             chart: {
@@ -99,7 +127,7 @@
                 text: ''
             },
             xAxis: [{
-                type: 'datetime',
+                type: 'column',
                 title: {
                     text: xaxis,
                 },
@@ -210,4 +238,33 @@
                 .add();
         });
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

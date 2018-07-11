@@ -10,13 +10,15 @@
                   
                 <div class="col-md-6 wide">
                   <div class="box1">
-                    <h3>Bar chart</h3>
+                    <h3>Column chart</h3>
                
-              <div id="barchart"></div>
+              <div id="columnchart"></div>
               </div>
                 </div>
                 <div class="col-md-6 wide">
                   <div class="box2">
+                      <h3>Pie chart</h3>
+                          <div id="piechart"></div>
                   </div>
               </div>
               </div>
@@ -36,6 +38,28 @@
           <div class="lds-spinner" style="100%;height:100%"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
            <!-- loder code end-->
        </div>
+
+
+       <div class="modal fade " id="View" tabindex="-1" role="dialog" aria-labelledby="links" >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-body">
+          
+             <div class="table" id="report"> </div>
+           
+            
+            </div>
+            
+            
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <a href="?file=payment"><button type="button" class="btn btn-primary submitDetails">Submit</button></a>
+          </div>
+            </div>
+               </div>
+           </div>
+                 </div> 
    
 <div class="clearfix"> </div>
 

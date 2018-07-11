@@ -276,21 +276,21 @@
 
       if($_POST['layout'] === "1010"){ 
 		   $userName = $_POST["userName"];
-			$sql = "select * from .`$userName`";
-
+			$sql = "SELECT a.*, COUNT( correct_option ) as 'Correct Answer' FROM .`$userName` a WHERE correct_option = entered_option group by (test_date)";
 			$res = query($sql);
 			if($res->num_rows  >= 1) {
 				$val = 0;
-				$row = array( 'Category' => [], 'Division' => [],'Test Date' =>[], 'CorrectAnswer' => []);
+				$row = array( 'Test Date' =>[],'Category' => [], 'Division' => [], 'Correct Answer' => [], 'View' => []);
 				while($r = $res -> fetch_assoc()) {
 				    
 				    $row['Category'][$val] = $r['cat_id'];
 				    $row['Division'][$val] = $r['div_id'];
 				    $row['Test Date'][$val] = $r['test_date'];
-				    $row['CorrectAnswer'][$val] = 'null';
+				    $row['Correct Answer'][$val] = $r['Correct Answer'];
+				    $row['View'][$val] = 'View';
 				    $val++;
 				}
-	        	$result_array =  array("tableHeader" => [["heading"=>"Category"], ["heading" => "Division" ],["heading" => "Test Date"], ["heading" => "CorrectAnswer"]],"tableData" => [$row]);
+	        	$result_array =  array("tableHeader" => [["heading" => "Test Date"], ["heading"=>"Category"], ["heading" => "Division" ], ["heading" => "Correct Answer"],["heading" => "View"]],"tableData" => [$row]);
 				
 		  	 	echo json_encode($result_array);
 	        }
@@ -320,7 +320,60 @@
 	      		 echo json_encode(array('Status' => 'Failure'));
 	   		} 
 			exit();
+		}
+
+		if($_POST['layout'] === "1012"){ 
+		   $userName = $_POST["userName"];
+			$sql = "SELECT a.*, COUNT( correct_option ) as 'Correct Answer' FROM .`$userName` a WHERE correct_option = entered_option ";
+			$res = query($sql);
+			if($res->num_rows  >= 1) {
+				$val = 0;
+				$row = array( 'Test Date' =>[],'Category' => [], 'Division' => [], 'Correct Answer' => []);
+				while($r = $res -> fetch_assoc()) {
+				    
+				    $row['Category'][$val] = $r['cat_id'];
+				    $row['Division'][$val] = $r['div_id'];
+				    $row['Test Date'][$val] = $r['test_date'];
+				    $row['Correct Answer'][$val] = $r['Correct Answer'];
+				    $val++;
+				}
+	        	$result_array =  array("tableHeader" => [["heading" => "Test Date"], ["heading"=>"Category"], ["heading" => "Division" ], ["heading" => "Correct Answer"]],"tableData" => [$row]);
+				
+		  	 	echo json_encode($result_array);
+	        }
+	        else {
+	      		 echo json_encode(array('Status' => 'Failure'));
+	   		} 
+			exit();
 		}	
+
+		
+	if($_POST['layout'] === "1013"){ 
+		   $userName = $_POST["userName"];
+		   $test_date = $_POST["test_date"];
+			$sql = "SELECT c.cat_name as 'Category' , d.div_name as 'Division' , a.entered_option , a.correct_option FROM `test@gmail.com` a , rsm_category c , rsm_div d WHERE a.cat_id = c.cat_id and a.div_id = d.div_id and test_date='".$test_date."'";
+			$res = query($sql);
+			if($res->num_rows  >= 1) {
+				$val = 0;
+				$row = array( 'Test Date' =>[],'Category' => [], 'Division' => [], 'Entered Option' => [],'Correct Option' => [], 'View' => []);
+				while($r = $res -> fetch_assoc()) {
+				    
+				    $row['Category'][$val] = $r['Category'];
+				    $row['Division'][$val] = $r['Division'];
+				    $row['Entered Option'][$val] = $r['Entered_Option'];
+				    $row['Correct Option'][$val] = $r['Correct_Option'];
+				    $row['View'][$val] = 'View';
+				    $val++;
+				}
+	        	$result_array =  array("tableHeader" => [["heading" => "Test Date"], ["heading"=>"Category"], ["heading" => "Division" ], ["heading" => "Entered Option"],["heading" => "Correct Option"],["heading" => "View"]],"tableData" => [$row]);
+				
+		  	 	echo json_encode($result_array);
+	        }
+	        else {
+	      		 echo json_encode(array('Status' => 'Failure'));
+	   		} 
+			exit();
+		}
 		
 	}
 		

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2018 at 07:19 AM
+-- Generation Time: Jul 18, 2018 at 07:31 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -68,7 +68,7 @@ INSERT INTO `rsm_test` (`test_id`, `cat_id`, `div_id`, `question`, `option1`, `o
 (19, 1, 1, 'what are the components CSS Box model?', 'margin,padding', 'margin,border', 'margin,border,padding,content', 'margin,content', 'option3', '', '', '', ''),
 (20, 1, 1, 'How do you add comments in CSS?', '/', '/*    */', '*/', '!--  --!', 'option2', '', '', '', ''),
 (21, 1, 1, 'What is Z-index?', 'stack order', 'lower order', 'middle order', 'stack middle oder', 'option1', '', '', '', ''),
-(22, 1, 1, 'what is localStorage Objects?', 'The <localStorage> object doesn''t have an expiry for the stored data', 'The <localStorage> object does have an expiry for the stored data', 'The <localStorage> object doesn?t have a provision to delete the data upon closing of browser window', 'none of these', 'option1', '', '', '', ''),
+(22, 1, 1, 'what is localStorage Objects?', 'The <localStorage> object doesn''t have an expiry for the stored data', 'The <localStorage> object does have an expiry for the stored data', 'The <localStorage> object doesn''t have a provision to delete the data upon closing of browser window', 'none of these', 'option1', '', '', '', ''),
 (23, 1, 1, 'With what character the ID selector is build?', '@', '#', '&', '$', 'option2', '', '', '', ''),
 (24, 1, 1, 'Amount of width required for an inline element is of ?????', 'maximum-width', 'minimum-width', 'necessary width', 'no width', 'option3', '', '', '', ''),
 (25, 1, 1, 'A caption for fieldset element can be defined through element ????.', 'cap', 'title', 'legend', 'attfield', 'option3', '', '', '', ''),

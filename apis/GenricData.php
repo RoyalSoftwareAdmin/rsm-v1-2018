@@ -376,6 +376,33 @@
 		}
 		
 	}
+	
+	if($_POST['layout'] === "1014"){ 
+		   $userName = $_POST["userName"];
+		   $test_date = $_POST["test_date"];
+			$sql = "SELECT a.*, COUNT( correct_option ) as 'Correct Answer' FROM .`$userName` a WHERE correct_option = entered_option and test_date='".$test_date."'";
+			$res = query($sql);
+			if($res->num_rows  >= 1) {
+				$val = 0;
+				$row = array( 'Test Date' =>[],'Category' => [], 'Division' => [], 'Correct Answer' => []);
+				while($r = $res -> fetch_assoc()) {
+				    
+				    $row['Category'][$val] = $r['cat_id'];
+				    $row['Division'][$val] = $r['div_id'];
+				    $row['Test Date'][$val] = $r['test_date'];
+				    $row['Correct Answer'][$val] = $r['Correct Answer'];
+				    $val++;
+				}
+	        	$result_array =  array("tableHeader" => [["heading" => "Test Date"], ["heading"=>"Category"], ["heading" => "Division" ], ["heading" => "Correct Answer"]],"tableData" => [$row]);
+				
+		  	 	echo json_encode($result_array);
+	        }
+	        else {
+	      		 echo json_encode(array('Status' => 'Failure'));
+	   		} 
+			exit();
+		}
+		
 		
 	
 

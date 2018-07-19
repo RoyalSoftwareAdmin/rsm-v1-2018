@@ -1,0 +1,49 @@
+.weeksale{
+	 /*background-color: #fff;*/
+	 border: 3px solid black;
+	 margin: 20px 5px;
+	 padding: 10px 10px;
+	 width: 100%;
+	 height: 445px;
+}
+
+.weeksale2{
+	/*background-color: #fff;*/
+	 border: 3px solid black;
+	 margin: 20px 5px;
+	 padding: 10px;
+	 width: 100%;
+	 height: auto;
+	 min-height: 120px;
+}
+.weeksale3{
+	/*background-color: #fff;*/
+	 border: 3px solid black;
+	 margin: 20px 5px;
+	 padding: 10px;
+	 width: 100%;
+	 height: 120px;
+}
+.socialmedia{
+	 /*background-color: #fff;*/
+	border: 3px solid black;*
+	 margin: 20px 5px;
+	 padding: 10px;
+	 width: 100%;
+	 height: 120px;
+}
+
+.bargraph{
+	   background-color: red;
+	   height: 350px;
+	   width: 100%;
+	   margin: 20px 5px;
+	   padding: 10px;
+}
+.colgraph{
+	   background-color: #fff;
+	   height: 350px;
+	   width: 100%;
+	   margin: 20px 5px;
+	   padding: 10px;
+}

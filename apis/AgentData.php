@@ -8,97 +8,29 @@
 			header("location: ../login.php");
 		}
 
-		if($_POST["layout"] == "1001"){
-			$fname = $_POST["fname"];
-			$lname = $_POST["lname"];
-			$password = $_POST["password"];
-			$email = $_POST["email"];
-			$mobile = $_POST["mobile"];
-			$password = md5($_POST["password"]);
-			$status = 1;			
-				
-		$query = "INSERT INTO rsm_company(fname, lname, email, mobile, password, status, value)VALUES ('".$fname."' ,'".$lname."' ,'".$email."' ,'". $mobile."' ,'". $password."','". $status."' , 64 )";
-			$res = query($query);
-			if($res){		
-				$query = "INSERT INTO rsm_user(fname, lname, email, password, status, value) VALUES ('".$fname."' ,'".$lname."' ,'".$email."' ,'". $password."' ,". $status.", 64)";
-				$res = query($query);
-				$query = "INSERT INTO rsm_profile(userName) VALUES ('".$email."')";
-				$res = query($query);
-				if($res){
-					$query = "INSERT INTO rsm_login(userName, Password, value) VALUES ('".$email."' ,'".$password."', 2)";
-					$res = query($query);
-					if($res){
-						echo json_encode(array('Status' => "1" ));
-					}else{
-						echo json_encode(array('Status' => mysqli_error($conn)));
-					}
-				}else{
-					echo json_encode(array('Status' => mysqli_error($conn)));
-				}
-				
-			}else{
-				echo json_encode(array('Status' => mysqli_error($conn)));
-			}
-		}
-
-		if($_POST["layout"] == "1003"){
-			$email = $_POST["email"]; //JSON.parse(localStorage.getItem("session")).email			
-		
-			$query = "select * from rsm_files where email ='".$email."'";
-			$res = query($query);
-			if($res){		
-				echo json_encode($res);
-			}else{
-				echo json_encode(array('Status' => mysqli_error($conn)));
-			}
-		}
-		if($_POST["layout"] == "1004"){				
-			$query = "select * from rsm_category";			
-			$res = query($query);
-			if($res){		
-				while($r = mysqli_fetch_assoc($res)) {
-			    $rows[] = $r;
-			}
-        	echo json_encode($rows);
-			}else{
-				echo json_encode(array('Status' => mysqli_error($conn)));
-			}
-		}
-		if($_POST["layout"] == "1005"){
-			$cat_id = $_POST["cat_id"];
-			$query = "select * from rsm_div where cat_id='".$cat_id."'";
-			$res = query($query);
-			if($res){		
-				while($r = mysqli_fetch_assoc($res)) {
-			    $rows[] = $r;
-			}
-        	echo json_encode($rows);
-			}else{
-				echo json_encode(array('Status' => mysqli_error($conn)));
-			}
-		}
-		if($_POST['layout'] === "1006"){ 
-			$sql = "select CONCAT_WS(' ', fname, lname) as Name , email as Email, value as AddedBy from rsm_user";
+		if($_POST['layout'] === "3001"){ 
+			$digits = 3;
+			$randomVar = rand(pow(10, $digits-1), pow(10, $digits)-1);
+			$userName = $_POST['userName'];
+			$test_id = $randomVar;
+			$title = $_POST["title"];
+			$condition = $_POST["condition"];
+			$min_yoe = $_POST["min_yoe"];
+			$max_yoe = $_POST["max_yoe"];
+			$start_date = $_POST["start_date"];
+			$end_date = $_POST["end_date"];
+			$skills_required = $_POST["skills_required"];
+			$sql = "CREATE TABLE IF NOT EXISTS `$userName`_test (test_id varchar(10), title varchar(200), condition varchar(10), min_yoe varchar(3), max_yoe varchar(3), start_date date, end_date date, skills_required varchar(100) )";
 			$res = query($sql);
-			if($res->num_rows  >= 1) {
-				$val = 0;
-				$row = array( 'Sl No.' => [], 'Name' => [], 'Email' => [], 'AddedBy' => [] );
-				while($r = $res -> fetch_assoc()) {
-				    $row['Sl No.'][$val] = (string)($val+1);
-				    $row['Name'][$val] = $r['Name'];
-				    $row['Email'][$val] = $r['Email'];
-				    $row['AddedBy'][$val] = $r['AddedBy'];
-					$val++;
-				}
-	        	$result_array =  array("tableHeader" => [["heading"=>"Sl No."] ,["heading"=>"Name"], ["heading" => "Email" ], ["heading" => "AddedBy"]],"tableData" => [$row]);
-				
-		  	 	echo json_encode($result_array);
-	        }
-	        else {
-	      		 echo json_encode(array('Status' => 'Failure'));
-	   		} 
-			exit();
-		}
+			$sql = "INSERT INTO `$userName`_test VALUES ('".$test_id."','". $title."', '".$condition."', '".$min_yoe."', '".$max_yoe."', '".$start_date."', '".$end_date."', '".$skills_required."')";
+			echo $sql;
+			$res = query($sql);
+			if($sql){
+				echo json_encode(array('Status' => 1));				
+			}else{
+				echo json_encode(array('Status' => "Not able to create test"));
+			}
+      }
 	}
 
 ?>

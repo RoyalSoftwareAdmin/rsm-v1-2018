@@ -47,3 +47,35 @@ label{
 .cond{
 	margin-left: 10px;
 }
+ .add{
+	
+	font-size: 25px;
+  color:#0000FF;
+  margin-bottom : 5% ;	
+
+}
+.tex{
+	margin-left: 10px;
+
+}
+.req{
+	margin-left: 20px;
+}
+
+
+.textareaDiv textarea{
+	width: 75%;
+	height: 150px;
+	 border-radius: 5px;
+}
+.textareaDiv label , .answer label{
+	display: block;
+    float: left;
+    margin: 70px 25px 0px 0px;
+}
+.year{
+	display: none;
+}
+.skills{
+	display: none;
+}

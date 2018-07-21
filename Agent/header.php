@@ -56,7 +56,7 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 	<script src="../js/modernizr.custom.js"></script>
 
 	<!--webfonts-->
-	<!--<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<!--//webfonts--> 
 
 	<!-- chart -->
@@ -106,8 +106,8 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
                 </a>
               </li>	
               <li class="treeview">
-                <a href="?file=addUser">
-                <i class="fa fa-user"></i> <span>Search Candidates</span>
+                <a href="?file=searchCandidate">
+                <i class="fa fa-user"></i> <span>Search Candidate</span>
                 </a>
               </li>	
               <li class="treeview">

@@ -8,7 +8,7 @@
 						<p class="add">Add New Test </p>
 						<div class="textareaDiv">
 		                  <label>Enter Title</label>
-		                  <input type="text" class="title"/> 
+		                  <input type="text" id="entertitle" class="title"/> 
 						</div>
 					</div>
 					<div class="default-margin">
@@ -40,7 +40,7 @@
 						
 						<div class="textareaDiv">
 		                  <label>Technical Skills</label>
-		                 <textarea > </textarea>
+		                 <textarea id="skills"> </textarea>
 						</div>
 					</div>
 				
@@ -55,11 +55,11 @@
 						
 						<label> From Date </label>
 
-					<input type="date" class="from"/>
+					<input type="date" id="startdate" class="from"/>
 					</div>
 					<div class="col-md-6">
 						<label> To Date </label>
-						<input type="date" class="from"/>	
+						<input type="date" id="enddate" class="from"/>	
 					</div>
 					</div>
 				</div>

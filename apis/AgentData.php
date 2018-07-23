@@ -22,6 +22,7 @@
 			$skills_required = $_POST["skills_required"];
 			$sql = "CREATE TABLE IF NOT EXISTS `$userName`_test (test_id varchar(10), title varchar(200), condition varchar(10), min_yoe varchar(3), max_yoe varchar(3), start_date date, end_date date, skills_required varchar(100) )";
 			$res = query($sql);
+		
 			$sql = "INSERT INTO `$userName`_test VALUES ('".$test_id."','". $title."', '".$condition."', '".$min_yoe."', '".$max_yoe."', '".$start_date."', '".$end_date."', '".$skills_required."')";
 			echo $sql;
 			$res = query($sql);

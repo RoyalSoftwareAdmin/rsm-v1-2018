@@ -3,12 +3,6 @@ session_start();
 	if( !isset($_SESSION["user"]) ){
         exit(header("Location: ../login.php"));
     }     
-    if($_SESSION["value"] != 256){
-        if($_SESSION["value"] == 64)
-          header("Location: ../User/index.php");
-        else
-          header("Location: ../Company/index.php");
-    }
 ?>
 <!--
 Author: Madhusudhana R K
@@ -241,7 +235,7 @@ License URL: http://www.royalsoftwaresolution.com/docs/licence.pdf
 								</div>	
 							</a>
 							<ul class="dropdown-menu drp-mnu">
-								<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
+							<li> <a href="?file=settings"><i class="fa fa-cog"></i> Settings</a> </li> 
 							<!-- 	<li> <a href="#"><i class="fa fa-user"></i> My Account</a> </li>  -->
 								<li> <a href="?file=profile"><i class="fa fa-suitcase"></i> Profile</a> </li> 
 								<li> <a href="../logout.php" class="logout"><i class="fa fa-sign-out"></i> Logout</a> </li>

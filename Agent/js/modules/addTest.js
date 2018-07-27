@@ -1,14 +1,7 @@
 $(document).ready(function(){
  
   var userName = JSON.parse(localStorage.getItem("session")).userName;
-  
-   /*var  entertitle = $("#entertitle").val(),
-       minimumList = $("#minimumList").val(),
-        maximumList = $("#maximumList ").val(),
-      skills = $("#skills").val(),
-        startdate = $("#startdate").val(),
-         enddate = $("#enddate").val(),*/
-    // Creating dropdowns for the list items
+  // Creating dropdowns for the list items
   var minimumOption = "", maximumOption ="";
   minimumList.forEach(function(k,r){
     minimumOption += "<option value='"+k.value+"'>"+k.name+"</option>";
@@ -20,15 +13,37 @@ $(document).ready(function(){
   })
   $("#maximumList").html(maximumOption);
 
-
+      var error = "";
     $(".submit").on("click", function(){
+      $("#error").html("");
       title = $("#entertitle").val(),
      condition = $("#idcheck").val(),
       min_yoe = $("#minimumList").val(),
       max_yoe = $("#maximumList ").val(),
-      start_date= $("#startdate").val(),
+      start_date = $("#startdate").val(),
       end_date = $("#enddate").val(),
       skills_required = $("#skills").val(),
+      flag = true;
+  if((title === "" || title === undefined) || (title == " " )){
+    error = "title cannot be blank";
+    flag = false;
+  }
+  else if(min_yoe >= max_yoe ){
+    error = " minimum year cannot be greater than maximum year";
+    flag = false;
+  }
+  else if((skills_required === "" ||  skills_required === undefined) || (skills_required == " " )){
+    error = "skills cannot be blank";
+    flag = false;
+  }
+   else if(start_date >= end_date ){
+    error = "start date cannot be greater than end date";
+    flag = false;   
+  }
+   if(!flag){
+    $("#error").html(error).css({"color":"#FF0000" , "font-weight":"bold" , "margin": "10px 0px"});
+       }
+   else{
       
      $.ajax({
     url : "../apis/AgentData.php",
@@ -46,7 +61,7 @@ $(document).ready(function(){
     }
 
        });
-   
+   }
    
   });
     
@@ -66,5 +81,3 @@ $(document).ready(function(){
 
 
  
-
-

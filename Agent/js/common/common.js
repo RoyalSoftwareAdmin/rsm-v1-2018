@@ -39,7 +39,7 @@ var ismail = function (val){
 
 var ispass = function(val){
 	if(val != "" || val != undefined){
-		var pattern = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{8,100}$/;
+		var pattern = /(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
 		var res = (val.match(pattern)) ?  true : false;
 		return res;
 	}
@@ -48,7 +48,7 @@ var ispass = function(val){
 
 var uid = function(val){
 	if(val != "" || val != undefined){
-		var pattern = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{8,100}$/;
+		var pattern = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{3,100}$/;
 		var res = (val.match(pattern)) ?  true : false;
 		return res;
 	}
@@ -112,14 +112,15 @@ $(document).ready(function() {
 
 	});
 
-	// if((height - reheight) > 100 ){
- //  		$("body").html("<div class='thief'><div class='thiefMsg'> Your IP ("+ip+") is watching, Don't try to hack </div></div>");
-	// 	setTimeout(function(){
-	// 		window.location = "http://www.royalsoftwaresolution.com"
-	// 	},1000);
+	if((height - reheight) > 100 ){
+  // 		$("body").html("<div class='thief'><div class='thiefMsg'> Your IP ("+ip+") is watching, Don't try to hack </div></div>");
+		// setTimeout(function(){
+		// 	window.location = "http://www.royalsoftwaresolution.com"
+		// },1000);
 
- //  	}
+  	}
    	$(".logout").on("click", function(){
+   		localStorage.clear()
    		$.ajax({
 		 	url : "../apis/GenricData.php",
 		 	data : {"layout" : "logout"},
@@ -129,16 +130,44 @@ $(document).ready(function() {
 }); 
 
 $(document).ready( function(){
+	var userName = JSON.parse(localStorage.getItem("session")).userName
 	$(".loggeduser").html(JSON.parse(localStorage.getItem("session")).fname);
-})
 
-$(document).ready( function(){
 	if (JSON.parse(localStorage.getItem("session")).gender == "Male" ) 
 	{ 
 		$(".prfil-img").html('<img src="../images/male.png" alt="">'); 
 	} 
 		else 
 		{ 
-		$(".prfil-img").html('<img src="../images/female.png" alt="">'); 
+			$(".prfil-img").html('<img src="../images/female.png" alt="">'); 
 	}
-});
+
+	$('.treeview-menu li').on('click',function(){
+		localStorage.setItem('section', $(this).attr('data-val'))
+	})
+	$(".divParent button").on("click", function(){
+		localStorage.setItem('div', $(this).attr('data-val'))
+	})
+
+	$('.item').on('click', function(){
+		localStorage.setItem('section', $(this).attr('data-val'))
+	})
+
+	$.ajax({
+		url : "../apis/GenricData.php",
+		data : {"layout" : "1011", "userName": userName},
+		method: "POST",
+		success: function(result){
+		result = JSON.parse(result);
+			$(".curBal").html("Rs "+result.balance);
+			 
+		},
+		error : function(result){
+			console.log(result);
+		}
+	})
+	
+
+})
+
+

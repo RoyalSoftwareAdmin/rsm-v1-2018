@@ -87,6 +87,7 @@
 						<div class="col-md-6">
 							
 				             <div class="graphbox1">
+				             	<h4>graph</h4>
 				             </div>
 				         </fieldset>
                         </div>
@@ -94,20 +95,24 @@
                               
 				           <div class="col-md-6">
 				            <div class="tabbox2">
+				            	<h4>Table</h4>
 				            </div>
 			               </div>
 			              </div>
 			              <div class="row">
 			              	<div class="col-md-4">
 			              		<div class="gbox3">
+			              			<h4>graph</h4>
 			              		</div>
 			                    </div>
                             <div class="col-md-4">
 			              		<div class="gbox3">
+			              			<h4>graph</h4>
 			              		</div>
 			                    </div>
                             <div class="col-md-4">
 			              		<div class="gbox3">
+			              			<h4>graph</h4>
 			              		</div>
 			                    </div>
 			                </div>

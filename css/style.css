@@ -8558,7 +8558,12 @@ h4.asd label {
      padding: 10px 10px;
      width: 100%;
      height: 445px;
+
 }
+.graphbox1 h4{
+    text-align: center;
+}
+
 
 .tabbox2{
      background-color: #fff;
@@ -8567,6 +8572,9 @@ h4.asd label {
      padding: 10px 10px;
      width: 100%;
      height: 445px;
+}
+.tabbox2 h4{
+    text-align: center;
 }
 .gbox3{
    background-color: #fff;
@@ -8577,9 +8585,9 @@ h4.asd label {
      height: 301px;
      
 }
-
-
-
+.gbox3 h4{
+    text-align: center;
+}
 .weeksale{
      background-color: #fff;
      border: 3px solid black;

@@ -9,6 +9,7 @@
 						<div class="textareaDiv">
 		                  <label>Enter Title</label>
 		                  <input type="text" id="entertitle" class="title"/> 
+		                 
 						</div>
 					</div>
 					<div class="default-margin">
@@ -40,7 +41,9 @@
 						
 						<div class="textareaDiv">
 		                  <label>Technical Skills</label>
+		                 
 		                 <textarea id="skills"> </textarea>
+
 						</div>
 					</div>
 				
@@ -65,8 +68,8 @@
 				</div>
 					
 				<div class="col-md-12 btnsParent">
-					<p id="error"></p>
-				 	<button class="btn btn-success btns submit">Submit</button>
+			<p id="error"></p>
+	    <button class="btn btn-success btns submit" onclick = "Validate()">Submit</button>
 				  	<button class="btn btn-danger btns">Clear</button>
 				  	
 				</div>

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-var minimumOption = "", maximumOption ="", districtOption ="", cityOption ="", ugOption ="", pgOption ="", fromOption ="", toOption ="", fromOption1 = "", toOption1 ="";
+var minimumOption = "", maximumOption ="", districtOption ="", cityOption ="", ugOption ="", pgOption ="", fromOption ="", fromOption1 = "", brOption = "";
   
   minimumList.forEach(function(k,r){
     minimumOption += "<option value='"+k.value+"'>"+k.name+"</option>";
@@ -32,11 +32,6 @@ var minimumOption = "", maximumOption ="", districtOption ="", cityOption ="", u
   })
   $("#fromList").html(fromOption);
   
-   toList.forEach(function(k,r){
-   toOption += "<option value='"+k.value+"'>"+k.name+"</option>";
-  })
-  $("#toList").html(toOption);
-  
   pgList.forEach(function(k,r){
    pgOption += "<option value='"+k.value+"'>"+k.name+"</option>";
   })
@@ -47,13 +42,13 @@ var minimumOption = "", maximumOption ="", districtOption ="", cityOption ="", u
   })
   $("#fromList1").html(fromOption1);
   
-   toList1.forEach(function(k,r){
-   toOption1 += "<option value='"+k.value+"'>"+k.name+"</option>";
+  brList.forEach(function(k,r){
+    brOption += "<option value='"+k.value+"'>"+k.name+"</option>";
   })
-  $("#toList1").html(toOption1);
-    
+  $("#brList").html(brOption);
+  
 	$.ajax({
-        url: '../apis/AgentData.php',
+        url: '../apis/AdminData.php',
         type: 'POST',
         data : {"layout" : "1004"},
         success: function (data) {
@@ -65,7 +60,7 @@ var minimumOption = "", maximumOption ="", districtOption ="", cityOption ="", u
            $("#SelectCategory").html(categoryoptions);
            var cat_id = $("#SelectCategory :selected").val();
             $.ajax({
-                url: '../apis/AgentData.php',
+                url: '../apis/AdminData.php',
                 type: 'POST',
                 data : {"layout" : "1005", "cat_id" : cat_id},
                 success: function (result) {
@@ -88,7 +83,7 @@ var minimumOption = "", maximumOption ="", districtOption ="", cityOption ="", u
     $("#SelectCategory").change(function(){
         var cat_id = $("#SelectCategory :selected").val();
         $.ajax({
-            url: '../apis/AgentData.php',
+            url: '../apis/AdminData.php',
             type: 'POST',
             data : {"layout" : "1005", "cat_id" : cat_id},
             success: function (result) {
@@ -104,5 +99,31 @@ var minimumOption = "", maximumOption ="", districtOption ="", cityOption ="", u
             }
         });
     })
+	
+	$("input:checkbox").on('click', function() {
+        // in the handler, 'this' refers to the box clicked on
+       var $box = $(this);
+       if ($box.is(":checked")) {
+         // the name of the box is retrieved using the .attr() method
+         // as it is assumed and expected to be immutable
+         var group = "input:checkbox[name='" + $box.attr("name") + "']";
+          // the checked state of the group/box on the other hand will change
+         // and the current value is retrieved using .prop() method
+         $(group).prop("checked", false);
+         $box.prop("checked", true);
+      } 
+	   else
+		   {
+            $box.prop("checked", false);
+           }
+    });
+	
+	 $('#districtList').change(function(){ 
+			$('#cityList').val( $(this).val() ) 
+		})
+		
+	$('value:"BE" ').change(function(){ 
+			$('#brList').show();
+		})	
+	
 })
-

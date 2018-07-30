@@ -104,9 +104,12 @@
                          <div class="row">
 						  
 						  <div class="default-margin ">
-					       <div class="col-md-6 ">
+					       <div class="col-md-9 ">
                                <label class="label1"> Select UG Qualification:</label>
 						       <select id="ugList"></select>	
+							   <select id="brList"></select>
+							   <!--<div class="subbr"><select id="subrList"></select>	</div>-->
+							   
 					       </div>
 					     
 						    <div class="col-md-3">
@@ -114,10 +117,6 @@
 						       <select id="fromList"></select>	
 					        </div>
 							
-							 <div class="col-md-3">
-							   <!--<label class="label1"> Passing Year:</label>-->
-						       <select id="toList"></select>	
-					         </div>
 					     </div>
 						</div>		
 
@@ -135,10 +134,6 @@
 						       <select id="fromList1"></select>	
 					        </div>
 							
-							 <div class="col-md-3">
-							   <!--<label class="label1"> Passing Year:</label>-->
-						       <select id="toList1"></select>	
-					         </div>
 					     </div>
 						</div>		
 

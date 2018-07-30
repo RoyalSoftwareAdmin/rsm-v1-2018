@@ -57,6 +57,12 @@ input , select{
 #maximumList{
 	width:150px;
 }
+#SelectCategory,#SelectDivision,#minimumList,#maximumList,#districtList,#cityList{
+	width: 50%;
+}
+#ugList,#brList,#pgList{
+	 width: 18%;
+}
 .label1{
 	padding: 10px;
 }

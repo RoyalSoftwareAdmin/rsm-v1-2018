@@ -6378,6 +6378,7 @@ h4.asd label {
 .text-danger {
   color: #f25656;
 }
+
 /*-- col_3 --*/
 /*-- //todo inbox chat section in index page --*/
 
@@ -6423,6 +6424,7 @@ h4.asd label {
     }
     .widgettable .table>tbody>tr>td, .widgettable .table>tbody>tr>th, .widgettable .table>tfoot>tr>td, .widgettable .table>tfoot>tr>th, .widgettable .table>thead>tr>td, .widgettable .table>thead>tr>th {
         padding: 15px 0;
+        
     }
     .mail.mail-name {
         width: 10%;
@@ -8772,6 +8774,16 @@ background-color: #fff;
 .ng-scope{
     text-align: center;
     display: none;
+}
+
+
+@media(max-width:640px){
+    
+.widgettable .table>tbody>tr>td, .widgettable .table>tbody>tr>th, .widgettable .table>tfoot>tr>td, .widgettable .table>tfoot>tr>th, .widgettable .table>thead>tr>td, .widgettable .table>thead>tr>th {
+        padding: 15px 0;
+        display: table;
+      }  
+    
 }
 
 
